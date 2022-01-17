@@ -1,0 +1,283 @@
+{% extends 'pages/base.html' %}
+
+{% load static %}
+
+{% block title%}Sunsetious | Thanh toán{% endblock %}
+
+{% block linkcss%}
+<link rel="stylesheet" href="{%static "css/order.css"%}">
+{% endblock %}
+{% block imgorsearch%}{% endblock %}
+{% block main%}
+<div class="link">
+    <a href="/">Trang Chủ</a>
+    <span style="color: #000000; font-weight:bold; margin-left:5px; margin-right:5px"> > </span>
+    <a href="#">Đặt vé</a>
+    <span style="color: #000000; font-weight:bold; margin-left:5px; margin-right:5px"> > </span>
+    <a href="/tourticket">Đặt Tour</a>
+    <span style="color: #000000; font-weight:bold; margin-left:5px; margin-right:5px"> > </span>
+    <a href="" style="color: #145B90">Thanh toán</a>
+</div>
+<section class="container">
+    <div class="info">
+        <div class="tour">
+            <div class="image" style="background-image: url({{product.image.url}});">
+                
+            </div>
+            <div class="descriptions">
+                <h3>{{product.name}}</h3>
+                <span style="color: #40B4E5; font-weight:bold"><i class="fas fa-star" style="color: #FBBB00; padding-right: 3px"></i>{{product.stars}}</span>
+                <span>{{product.n_reviews}} đánh giá</span>
+                <span>{{product.views}} xem</span>
+
+                <table class="table">
+                    <thead>
+                        <th>Thời gian</th>
+                        <th>Ngày đi</th>
+                        <th>Khởi hành tại</th>
+                    </thead>
+
+                    <tr>
+                        <td>1N</td>
+                        <td>15/01/2021</td>
+                        <td>Tp.HCM</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <form method="POST" action="">
+        {% csrf_token %}
+        {% if user.customer %}
+        <!-- Chinh cho nay giup anh -->
+        {% else %}
+        <div class="customer">
+            <h3>Thông tin liên hệ</h3>
+                <div class="log-in">
+                    <i class="fas fa-user-circle" style="color: #2DA6D9"></i>
+                    <a href="/signin" style="color: #137ACA; font-weight: bold; font-size: 17px">Đăng nhập</a>
+                    <span style="font-size: 17px"> để đặt phòng nhanh hơn mà không cần nhập thông tin</span>
+                </div>
+                <label for="name">Họ và tên: <span class="red">*</span></label> <br>
+                <input required type="text" name="name" id="name" placeholder="Mai Trong Dung"> <br>
+                <label for="phone">Số điện thoại: <span class="red">*</span></label>
+                <input required type="tel" name="phone" id="phone" placeholder="0973194973**"> <br>
+                <label for="mail">Email: <span class="red">*</span></label>
+                <input required type="email" name="email" id="mail" placeholder="dung111@gmail.com"> <br>
+            
+        </div>
+        {% endif %}
+        
+        <div class="voucher">
+            <!-- <i class="fas fa-ticket alt"></i> -->
+            <span class="giamgiabox">
+                <i class="fas fa-ticket-alt fa-2x" style="color: #74C688; margin-right:20px;"></i>
+                <span class="magiamgia">
+                    Mã giảm giá
+                </span>
+            </span>
+
+            <button type="button" id='voucher-btn' class="add">+</button>
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p><b>Sử dụng giảm giá</b></p>
+                  <input value="" name='voucher' for='voucher' id="voucher-input" placeholder="Nhập mã giảm giá">
+                  <button type="button" class="use" id='voucher-submit' onclick="applyDiscount()"> Áp dụng </button>
+                  <p id='vouchers'></p>
+                   
+                  {% for voucher in vouchers %}
+                  <div class="voucher-list">
+                      <div class='voucher-info'>
+                          <ul>
+                            <li><label class="voucher-code"> {{voucher.code}} </label></li>
+                            <li><label> <b id='{{voucher.value}}'>{{voucher.value}}</b></label></li>
+                            <script>
+                                document.getElementById('{{voucher.value}}').innerText = '{{voucher.value}}' * 100 + '%';
+                            </script>
+                            <li><span>Hạn sử dụng: {{voucher.expiration_date}}</span></li>
+                          </ul>
+                          <button type="button" id='btn{{voucher.code}}' class="use" onclick="selectVoucher(id)"><b>Sử dụng</b></button>
+                      </div>
+                  </div>
+                  
+                  {% endfor %}
+                </div>
+            </div>
+        </div>
+        <script>
+            function selectVoucher(id) {
+                let btn = document.getElementById(id);
+                let voucherCode = btn.parentNode.querySelector('ul li label').innerText;
+                console.log(voucherCode);
+                let voucherValue = btn.parentNode.querySelector('ul li label b').innerText;
+                document.getElementById('voucher-input').value = voucherCode;
+            }
+
+            function closeModal() {
+                let modal = document.getElementById('myModal');
+                modal.style.display = 'none';
+            }
+            function applyDiscount() {
+                const voucherCode = document.getElementById('voucher-input').value;
+                let vouchers = JSON.parse('{{ serialized_vouchers | safe}}');
+                console.log(vouchers);
+                let isValid = false;
+                for (let i in vouchers) {
+                    console.log(vouchers[i].fields);
+                    if (vouchers[i].fields.code == voucherCode) {
+                        isValid = true;
+                        document.getElementById('discount').innerText = `-${vouchers[i].fields.value * 100}%`;
+                        reCalculate(); 
+                        break;
+                    }
+                }
+                if (isValid) closeModal();
+                else alert('Voucher code invalid!');
+            }
+        </script>
+        <script>
+            let nVouchers = '{{vouchers.count}}';
+            let msg = `<b>Hoac chon mot ma giam gia duoi day</b> (${nVouchers})`;
+            let vouchers = document.getElementById('vouchers');
+            vouchers.innerHTML = msg;
+            let modal = document.getElementById('myModal');
+            let btn = document.getElementById('voucher-btn');
+            let span = document.getElementsByClassName('close')[0];
+            btn.onclick = function() {
+                modal.style.display = 'block';
+                span.onclick = function() {
+                    modal.style.display = 'none';
+                }
+
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = 'none';
+                    }
+                }
+            }
+
+
+        </script>
+        <div class="payment">
+            <h3>Phương thức thanh toán</h3>
+            <p>Sau khi hoàn tất thanh toán, mã xác nhận tour sẽ được gửi ngay qua SMS và Email của bạn.</p>
+                <div class="method">
+                    <label for="qr"><i class="fas fa-qrcode" id="icon"></i> Thanh toán QR-Pay</label>
+                    <input type="radio" name="pay" id="qr" value="qr" required>
+                </div>
+
+                <div class="method">
+                    <label for="atm"> <i class="far fa-credit-card" id="icon"></i> Thanh toán thẻ ATM/Tài khoản ngân hàng</label>
+                    <input type="radio" name="pay" id="atm" value="atm" required>
+                </div>
+
+
+                <div class="method">
+                    <label for="visa"> <i class="fas fa-credit-card" id="icon"></i> Thanh toán thẻ visa/mastercard</label>
+                    <input type="radio" name="pay" id="visa" value="visa" required>
+                </div>
+
+
+                <div class="method">
+                    <label for="bank"> <i class="fas fa-money-check" id="icon"></i> Chuyển khoản ngân hàng</label>
+                    <input type="radio" name="pay" id="bank" value="bank" required>
+                </div>
+
+        </div>
+        <div class="confirm">
+            <h3>Xác nhận</h3>
+            <div class="cf">
+            <input required type="radio" name="agree" id="agree">
+            <label for="agree">Đồng ý với <a href="#" style="color: #2DA6D9">Điều kiện và điều khoản</a> của chúng tôi</label> 
+            </div>
+            <button type="submit" class="thanhtoan"> Thanh toán</button>
+            
+        </div>
+        {% if messages %}
+        {% for message in messages %}
+          {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+        {% endfor %}
+        {% endif %}
+    </div>
+    <div class="price-bill">
+        <div class="services">
+            <p class="bold" style="font-size: 25px; color: #40B4E5; font-weight: bold">Tóm tắt </p>
+            <span class="bold">Tập trung:</span> <span> xe đón tận nơi
+                 </span> <br>
+            <span class="bold" style=" position: relative; right: 18px;"><i class="fas fa-stopwatch" style="color: #145B90"></i> Thời gian:</span> <span style=" position: relative; right: 18px;">6:30 AM - 7:00 AM</span>
+
+            <p class="bold">Ưu đãi</p>
+            <p style=" position: relative; right: 18px"><i class="fas fa-utensils" style="color: #145B90"></i> 2 bữa ăn miễn phí</p>
+            <p>Bữa sáng: Bánh mì + Cà phê/sữa</p>
+            <p>Bữa trưa: Cơm phần</p>
+
+            <p class="bold">Một món quà lưu niệm</p>
+            <p class="bold">Chụp 5 tấm hình free</p>
+        </div>
+
+        <div class="bill">
+            <div class="container prices gray noborder">
+                <label for="numbers">Số lượng: </label>
+                <input onchange="reCalculate()" min="0" type="number" name="quantity" id="num" placeholder="1" value="1">
+                
+            </div>
+
+            <div class="container center" style="color: #40B4E5">x</div>
+
+            <div class="container prices gray">
+                <p>Đơn giá: </p>
+                <p class="price" id="price">{{product.price}}</p>
+            </div>
+            <div class="container prices end gray">
+                <p class="price" id='num-price'>{{product.price}}</p>
+            </div>
+            <div class="container prices gray">
+                <p>Vat (10%): </p>
+                <p class="price" id="vat"></p>
+            </div>
+            <div class="container prices gray">
+                <p>Discount: </p>
+                <p class="price" id="discount"></p>
+            </div>
+            <div class="container prices gray">
+                <p><b>Thành tiền: </b></p>
+                <p style="color: rgb(16, 87, 110);" class="price final" id="sum"></p>
+            </div>
+            <script>
+                function reCalculate() {
+                    let priceStr = document.getElementById('price').innerText;
+                    let discount = document.getElementById('discount').innerText;
+                    if (discount != '') {
+                        discount = Number(document.getElementById('discount').innerText.replace('%', '')) / 100;
+                    }
+                    else discount = 0;
+                    
+                    priceStr = priceStr.toString().replace(',', '');
+                    priceStr = priceStr.replace(' VND', '');
+                    let price = Number(priceStr);
+
+                    let numbers = Number(document.getElementById('num').value);
+                    let numPrice = price * numbers;
+                    let vat = Math.floor(0.1 * numPrice);
+                    let total = numPrice + vat + (numPrice * discount);
+
+                    document.getElementById('price').innerHTML = price.toLocaleString() + ' VND';
+                    document.getElementById('num-price').innerHTML = numPrice.toLocaleString() + ' VND';
+                    document.getElementById('vat').innerHTML = vat.toLocaleString() + ' VND';
+                    document.getElementById('sum').innerHTML = total.toLocaleString() + ' VND';
+                    // document.getElementById('discount').innerHTML = (discount * numPrice).toLocaleString() + ' VND';
+                }
+            </script>
+            <script>
+                let price = document.getElementById('price').innerHTML;
+                document.getElementById('price').innerHTML = price.toLocaleString() + ' VND';
+            </script>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+{% block linkjs %}{% endblock %}
+

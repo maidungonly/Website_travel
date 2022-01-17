@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.grid{
+	width: 1200px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.grid__full-width{
+	width: 100%;
+}
+
+.grid__row{
+	display: flex;
+	flex-wrap: wrap;
+}
+body{
+	background-color: #E3F8FF;
+}
+section{
+	width: 85%;
+	margin: 0 auto;
+	margin-bottom: 3rem;
+	/*box-shadow: 1px 2px 1px #6e6e6e;*/
+}
+h2[class='center']{
+	font-family: quicksan-bold;
+	font-size: 40px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+h2{
+	font-family: quicksan-bold;
+	font-size: 20px;
+	margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+}
+h3{
+	margin-block-start: 10px;
+    margin-block-end: 5px;
+}
+.header__menu--items1{
+	color:#137ACA;
+	font-family: quicksan-bold;
+}
+.owl-carousel .owl-stage-outer{
+	width: 95%;margin: 0 auto;}
+/*slide*/
+header{
+	height: 650px;
+}
+.animation{
+	display: none;
+}
+.slide__container{
+	
+	/*left: 280px;*/
+	width: 100%;
+	height: 650px;
+}
+
+.slide--items{
+	width: 100%;
+	height: 600px;
+}
+
+.slide--content{
+	position: relative;
+	bottom: 170px;
+	height: 50px;
+	width: 90%;
+	margin-left: 50px;
+	color: #FFFFFF;
+	font-size: 18px;
+}
+
+.dot {
+    cursor:pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 1s ease;
+
+}
+.dot:hover {
+            background-color: #717171;
+          }
+.animation__items{
+	position: relative;
+	text-align: center;
+	bottom: 100px;
+}
+/*form*/
+.form__items{
+	border-right: 1px solid #CFCFCF;
+}
+.form__items:nth-of-type(2),.form__items:nth-of-type(3){
+	text-align: center;
+}
+.form__edit{
+	display: flex;
+	width: 70%;
+	height: 55px;
+	background-color: #FEFEFE;
+	justify-content: space-between;
+	border-radius: 5px 5px 5px 5px;
+	position: relative;
+	bottom: 500px;
+	left: 15%;
+}
+.titlex{
+	text-align: center;
+	position: relative;
+	bottom: 550px;
+	color: #FFFFFF;
+	font-size: 50px;
+}
+.form_input{
+	width: 200px;
+	height: 25px;
+	margin-left: 40px;
+	border: none;
+	background-color: #FEFEFE;
+	font-family: quicksan-bold;
+	text-align: center;
+	font-size: 16px;
+
+}
+label{
+	color: #145B90;
+}
+label[for="place"]{
+	padding-left: 20px;
+}
+input[name ="place"]{
+	min-width: 360px;
+}
+input:focus{
+	outline:0;
+}
+
+.form__button{
+	width: 60px;
+}
+.form__button button{
+    width: 60px;
+    height: 55px;
+    background-color: #70c6eb;
+    color:white;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+	cursor: pointer;
+}
+
+/*==========================phần main=======================*/
+.text__container{
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	height: 550px;
+	background-color: white;
+	border-radius: 15px;
+	box-shadow: 1px 2px 1px #6e6e6e;
+}
+
+.text__content{
+	position: relative;
+	top: 100px;
+	left: 10px;
+}
+.photo{
+	width: 400px;
+	height: 550px;
+	margin-left: 40px;
+}
+
+/*==========================AREA============================*/
+/*Dia danh noi tieng*/
+.diadanhtittle,.tourtittle{
+	padding-left: 5rem;
+	padding-top: 1rem;
+}
+.diadanh,.tour_root{
+	background-color: #FFF;
+	border-radius: 13px;
+	box-shadow: 1px 2px 5px #6e6e6e;
+}
+.areareview{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    /*text-shadow: 1px 1px 5px #1b1b1b; */
+}
+.diadanh_container,.tour_container{
+    width: 96%;
+    height:fit-content;
+    display: grid;
+    grid-template-columns: 1fr 25fr 1fr;
+    border: 0px;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+    grid-gap:1px;
+}
+.diadanh_slide-gr,.tour_slide-gr{
+    width: 100%;
+    height: 350px;
+    margin: 0 auto;
+    overflow: hidden;
+    font-size: 0;
+    border: 0px;
+    padding: 0px;
+}
+.diadanh_slides,.tour_slides{
+    width: 100%;
+    font-size: 0;
+    transition: all 0.5s ease;
+    height: fit-content;
+}
+
+.diadanh_slide,.tour_slide{
+    width: 120px;
+    display: inline-block;
+    text-align: center;
+	font-size: 15px;
+    
+}
+.buttonlr{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.left, .right{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #5e5d5d;
+    border-radius: 35px;
+}
+
+div[class*= "diadanh_content"]{
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction:column;
+    
+}
+.diadanh_slide p{
+    text-shadow: 1px 1px 5px #1b1b1b; 
+}
+
+button[name="show_all"]{
+    font-family: quicksan;
+    width: 200px;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    border: 1px solid #706B6B;
+    margin:10px;
+    cursor: pointer;
+    position: relative;
+    left: 45%;
+}
+button[name="show_all"]:hover{
+    background-color: #706B6B;
+    color:white;
+}
+button[name="show_all"]:active{
+    background-color: #706B6B;
+    color:white;
+}
+.areaimg{
+    
+    height: 100%;
+    border-radius: 10px;
+}
+/*========================TOUR GIẢM GIÁ======================*/
+/*.tour_container{
+	max-width: 1024px;
+	margin: auto;
+}
+
+.tour{
+	margin-bottom: 50px;
+	background-color: white;
+	border-radius: 15px;
+	height: 600px;
+}
+.tour_img{
+	width: 400px;
+	height: 300px;
+
+}
+.tour_text {
+	
+	position: absolute;
+	
+	
+	
+}
+.tour-content-item{
+	position: relative;
+	width: auto;
+	height: 450px;
+	background-color: white;
+	border: 1px solid #C4C4C4;
+	
+
+}
+
+.tour__modified_1{
+	display: flex;
+	position: relative;
+	bottom: 400px;
+	left: 180px;
+	height: auto;
+	width: auto;
+}
+.box1{
+	padding: 5px;
+	border: 1px solid;
+	border-radius: 18px;
+	font-size: 15px;
+	position: relative;
+	left: 7px;
+	bottom: 7px;
+	background-color: orange;
+	border-color: orange;
+}
+
+.tour__modified_2{
+	display: flex;
+	position: relative;
+	bottom: 432px;
+	height: auto;
+	width: auto;
+	left: 5px;
+}
+.box2{
+	padding: 5px;
+	border: 1px solid;
+	border-radius: 18px;
+	font-size: 15px;
+	position: relative;
+	left: 4px;
+	bottom: 4px;
+	background-color: orange;
+	width: auto;
+	border-color: orange;
+	color: white;
+
+}
+
+.tour__modified_3{
+	display: flex;
+	position: relative;
+	bottom: 220px;
+	left: 5px;
+}
+ @keyframes my { 
+    0% { color: white; 
+      background-color: blue;   } 
+    50% { color: #fff; 
+    background-color: red;  }
+    100% { color: #F8CD0A;
+      background-color: orange;} 
+ } 
+
+.box3{
+	padding: 5px;
+	border: 1px solid;
+	border-radius: 18px;
+	font-size: 15px;
+	position: relative;
+	left: 4px;
+	bottom: 4px;
+	background-color: orange;
+	border-color: orange;
+	 animation: my 700ms infinite;
+}
+.tour__modified_4{
+	display: flex;
+	width: auto;
+	margin-left: 10px;
+}
+.vote{
+	display: flex;
+	padding: 5px;
+	border-right: 1px solid;
+}
+
+.tour_button{
+	height: 40px;
+	width: 200px;
+	border-radius: 18px;
+	background-color: orange;
+	border-color: orange;
+	font-size: 20px;
+	color: white;
+}*/
+
+
+
+/*/*tour giảm giá*/
+/*.tour_root{
+	width: 100%;
+	height: 500px;
+}
+
+.tour_container{
+	width: 85%;
+	height: 500px;
+	margin: 0 auto;
+	background-color: #FFF;
+	border-radius: 13px;
+	box-shadow: 1px 2px 5px #6e6e6e;
+}
+
+.title_h1{
+	position: relative;
+	left:40px;
+	top: 15px;
+	font-size: 30px;
+	color: #333333;
+}
+
+.tour-content{
+	padding: 10px;
+	margin-left: 20px;
+	width: 90%;
+}
+/*định dạng từng khung trong thanh*/
+.tour-content-item{
+	position: relative;
+	top: 6px;
+	width: 270px;
+	height: 330px;
+	background-color: white;
+	border: 1px solid #C4C4C4;
+	border-radius: 20px;
+	margin: 8px;
+	
+}
+
+.tour__modified_1{
+	display: flex;
+	position: relative;
+	bottom: 220px;
+	left: 170px;
+	height: auto;
+	width: auto;
+}
+.box1{
+	padding: 5px;
+	border: 1px solid;
+	border-radius: 18px;
+	font-size: 13px;
+	position: relative;
+	left: 7px;
+	bottom: 7px;
+	background-color: orange;
+	border-color: orange;
+}
+
+.tour__modified_2{
+	display: flex;
+	position: relative;
+	bottom: 280px;
+	height: auto;
+	width: auto;
+	left: 5px;
+	border: none;
+	align-items: center;
+	gap: 5px;
+}
+.box2{
+	padding: 5px;
+	border: 1px solid;
+	border-radius: 18px;
+	font-size: 13px;
+	position: relative;
+	background-color: #FB9700;
+	width: auto;
+	border-color: rgb(255, 255, 255);
+	color: white;
+
+}
+
+.tour__modified_3{
+	display: flex;
+	position: relative;
+	bottom: 200px;
+	left: 5px;
+	align-items: center;
+	gap: 5px;
+}
+ @keyframes my { 
+    0% { color: white; 
+      background-color: rgb(252, 96, 96);  } 
+    50% { color: #fff; 
+    background-color: rgb(252, 96, 96);  }
+    100% { color: #f3d035;
+      background-color: rgb(247, 202, 120);} 
+ } 
+
+.box3{
+	padding: 5px;
+	border: 1px solid;
+	border-radius: 18px;
+	font-size: 13px;
+	position: relative;
+	background-color: rgb(255, 255, 255);
+	border-color: orange;
+	animation: my 700ms infinite;
+}
+
+.tour__modified_4{
+	display: flex;
+	width: auto;
+	justify-content: space-evenly;
+	height: 17px;
+	gap: 5px;
+}
+.vote{
+	display: flex;
+	padding: 5px;
+	border-right: 1px solid;
+	align-items: center;
+	gap:2px;
+}
+.tour_button{
+	text-decoration: none;
+	height: 40px;
+	width: 170px;
+	border-radius: 15px;
+	background-color: #FB9700;
+	border-color: orange;
+	font-size: 16px;
+	font-family: quicksan-bold;
+	color: white;
+}
+.tour_button:hover{
+	cursor: pointer;
+}
+.tour_button a{
+	text-decoration: none;
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

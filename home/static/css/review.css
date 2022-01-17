@@ -1,0 +1,357 @@
+html{
+    font-family: quicksan;
+    font-size: 15px;
+    background-color: #f5f5f5;
+}
+body{
+    margin: 0 auto;
+    background-color: #f5f5f5;
+}
+main{
+    padding-left: 20px;
+}
+h1{
+    color: rgb(22, 47, 92);
+    font-size: 30px; 
+    margin-bottom: 10px;
+    padding-left: 30px;
+}
+h2{
+    color: rgb(22, 47, 92);
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 30px
+}
+ul{
+    text-decoration: none;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    padding-inline-start: 0px;
+}
+li{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+.header__menu--items2{
+    color: #137ACA;
+    font-family: quicksan-bold;
+}
+/*nen & thanh tim kiem*/
+.search-bar{
+    width: 100%;
+    height: 600px;
+    background-image: url(../images/review/pexels-pixabay-33545.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.thanh-tim-kiem{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    align-items: center;
+    margin: 0 auto;
+    grid-gap: 0px;
+    width: 80%;
+    position: relative ;
+    top:40%;
+}
+input[name="search"] {
+    font-family: quicksan;
+    font-size: 15px;
+    width: 68vw;
+    height: 50px;
+    text-align:left;
+    padding-left: 20px;
+    padding-right: 0px;
+    border: 1px solid #FEFEFE;
+    background-color: #FEFEFE;
+    border-radius: 10px 0px 0px 10px;
+    outline:none;
+
+}
+button[name="search"]
+{
+    width: 50px;
+    height: 50px;
+    background-color: #70c6eb;
+    color:white;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+}
+
+
+/*Dia danh noi tieng*/
+.areareview{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    /*text-shadow: 1px 1px 5px #1b1b1b; */
+}
+.diadanh_container{
+    width: 96%;
+    height:fit-content;
+    display: grid;
+    grid-template-columns: 1fr 25fr 1fr;
+    border: 0px;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+    grid-gap:1px;
+}
+.diadanh_slide-gr{
+    width: 100%;
+    height: 350px;
+    margin: 0 auto;
+    overflow: hidden;
+    font-size: 0;
+    border: 0px;
+    padding: 0px;
+}
+.diadanh_slides{
+    width: 100%;
+    font-size: 0;
+    transition: all 0.5s ease;
+    height: fit-content;
+}
+.diadanh_slide{
+    width: 120px;
+    font-size: 30px;
+    display: inline-block;
+    text-align: center;
+    
+}
+.buttonlr{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.left, .right{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #5e5d5d;
+    border-radius: 35px;
+}
+
+div[class*= "diadanh_content"]{
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction:column;
+    
+}
+.diadanh_slide p{
+    text-shadow: 1px 1px 5px #1b1b1b; 
+}
+
+button[name="show_all"]{
+    font-family: quicksan;
+    width: 200px;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    border: 1px solid #706B6B;
+    margin:10px;
+    cursor: pointer;
+    position: relative;
+    left: 45%;
+}
+button[name="show_all"]:hover{
+    background-color: #706B6B;
+    color:white;
+}
+button[name="show_all"]:active{
+    background-color: #706B6B;
+    color:white;
+}
+/*Bai viet yeu thich nhat trong tuan*/
+.postyt_container{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap:0px;
+    width: 75%;
+    height: 380px;
+    padding-left: 3%;
+    align-items: center;
+
+}
+.postyt_container img{
+    grid-row: 1/6;
+    grid-column: 1/2;
+    border-radius: 10px;
+    align-items: center;
+}
+.text-box {
+    grid-row: 2/5;
+    background-color: #E6EFF2;
+    width: 50vw;
+    height: 250px;
+    border-radius: 0px 20px 20px 0px;
+    padding-left: 20px;
+}
+time{
+    color:#787878;
+}
+.text-box{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.link_postyt{
+    grid-row:1/2;
+    grid-column: 1/5;
+    text-align: right;
+    align-items: center;
+    padding-right: 10px;
+    padding-top: 5px;
+    font-size: 15px;
+    color: #706B6B;
+}
+.postyt_title{
+    grid-row: 2/3;
+    grid-column: 1/5;
+    font-size: 19px;
+    font-weight: bold;
+    color: #145B90 ;
+}
+.postyt_time{
+    grid-row: 3/4;
+    grid-column: 1/2;
+}
+.postyt_noidung{
+    grid-row: 4/5;
+    grid-column: 1/5;
+}
+.rateinpostyt{
+    grid-column: 2/3;
+    grid-row: 5/6;
+    padding-left: 20px;
+}
+/*Bo_loc*/
+.bo_loc{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+    width: 600px;
+    align-items: center;
+    justify-items: center;
+    color: #145B90;
+    font-family: quicksan-bold;
+}
+.bo_loc button{
+    text-decoration: none;
+    height: 35px;
+    width: 100px;
+    font-size: 15px;
+    font-family: quicksan-bold;
+    color: #8A8A8A;
+    background-color: #FBFBFB;
+    border-radius: 10px;
+    border: 1px solid #BBBBBB;
+    cursor: pointer; 
+}
+.bo_loc button:active,.bo_loc button:hover{
+    background-color: #BBBBBB;
+    color: #FFFFFF;
+}
+.bo_loc section{
+    text-decoration: none;
+    height: 35px;
+    width: 110px;
+    font-size: 15px; 
+    
+}
+/*list tour*/
+.item{
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    width: 98%;
+    margin-top: 10px;
+    height: fit-content;
+}
+.post{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 2fr 3fr 0.5fr;
+}
+.post_img{
+    grid-column: 1/2;
+    grid-row:1/4;
+    width: 100%;
+    height: 100%;
+}
+.post_title{
+    grid-column: 2/3;
+    grid-row:1/2;
+    padding-left: 15px;
+}
+.title_post{
+    font-size: 18px;
+    font-family: quicksan-bold;
+    color: #145B90;
+}
+.post_noidung{
+    grid-column: 2/3;
+    grid-row: 2/4;
+    width: 90%;
+    padding-left: 15px;
+}
+.post svg{
+    grid-row: 4/5;
+    grid-column: 1/4;
+    align-items: center;
+}
+.item aside{
+    text-align: center;
+}
+.box_tour{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    border: 1px solid #9e9b9b;
+    width: fit-content;
+    border-radius: 15px;
+}
+.box_tour_text{
+    text-align: center;
+    color:#145B90;
+}
+.box_tour_text .bold{
+    font-family: quicksan-bold;
+    font-weight: bold;
+}
+button[name="xem_ngay"]
+{
+    background-color: #FB9700;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    width: 157px;
+    height: 35px;
+    font-size: 16px;
+    cursor: pointer;
+}
+button[name="xemtiep"]
+{
+    background-color: #15507C;
+    color: white;
+    border: none;
+    width: 195px;
+    height: 43px;
+    text-align: center;
+    font-size: 15px;
+    margin-left: 25%;
+    
+}
+.rateinpost{
+    text-align: center;
+}
+
+.tourthamkhao{
+    font-size: 20px;
+    color: rgb(22, 47, 92);
+}
+.areaimg{
+    
+    height: 100%;
+    border-radius: 10px;
+}

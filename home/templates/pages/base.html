@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static "css/base.css" %}" type="text/css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    {% block linkcss%}{% endblock %}
+</head>
+
+<body>
+    <header>
+        <!-- phòng dịch covid -->
+        <div class="header_fixed">
+            <div class="header__text">
+                <a href="https://sokhdt.camau.gov.vn/wps/portal/?1dmy&page=chitiet&urile=wcm%3Apath%3A/sokhdtlibrary/sokhdtsite/noidungtrang/thongtincanbiet/cacbienphapchongdichtrongtinhhinhmoi"
+                    class="">Nhận thông tin mới nhất về biện pháp ứng phó COVID-19 của chúng tôi</a>
+            </div>
+            <nav>
+                <div class="header__container ">
+                    <ul class="header__menu">
+                        <li class="header__menu--list"><a href="/" class="header__menu--items1">Trang chủ</a>
+                        <li class="header__menu--list">
+                            <div class="dropdown">
+                                <button class="dropbtn">Đặt vé</button>
+                                <div class="dropdown-content">
+                                    <a href="/tourticket">Vé tour</a>
+                                    <a href="/moveticket">Vé di chuyển</a>
+                                    <a href="/roomticket">Vé phòng</a>
+                                    <a href="/otherservicesticket">Vé trải nghiệm</a>
+                                </div>
+                        </li>
+                        <li class="header__menu--list"><a href="/review" class="header__menu--items2">Cẩm nang du lịch</a>
+                        </li>
+                        <li class="header__menu--list"><a href="/support" class="header__menu--items3">Hỗ trợ</a></li>
+                    </ul>
+                    <!-- phần logo -->
+                    <div class="header__logo">
+                        <a href="/"><img src="{% static 'images/header/Logo.png' %}"></a>
+                        
+                    </div>
+
+                    <!-- phần button -->
+                    <ul class="header__rightmenu">
+                        <li class="header__rightmenu--list"><i class="far fa-phone-alt fa-1x"></i>1900 2901</li>
+                        <li class="header__rightmenu--list">
+                            <img style="height: 18px; width: 18px;" src="{% static 'images/header/Co_VietNam.png' %}"/>
+                        </li>
+                        {% if request.user.customer %}
+                        <li class="header__rightmenu--list"><a href="/cart"><i class="far fa-shopping-cart fa-lg"
+                            style="color: #1067aa;"></i></a></li>
+                        <li class="header__rightmenu--list">Xin chào, <a href="/contact" style="color:#1067aa">{{user.get_username}}</a></li>
+                        <form method="POST" action="/signin/">
+                            {% csrf_token %}
+                            <li class="header__rightmenu--list"><button name='logout' class="logout" type="submit">Đăng xuất</button></li>
+                        </form>
+                        
+                        {% else %}
+                        <li class="header__rightmenu--list"><a href="/cart"><i class="far fa-shopping-cart fa-lg"
+                                style="color: #1067aa;"></i></a></li>
+                        <li class="header__rightmenu--list"><a href="/register"><button class="header__DK">Đăng ký</button></a></li>
+                        <li class="header__rightmenu--list"><a href="/signin"><button class="header__DN">Đăng nhập</button></li></a>
+                        {% endif %}
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        {% block imgorsearch%}{% endblock %}
+    </header>
+    <main>
+        {% block main%}{% endblock %}
+        <button class="nut-mo-chatbox" onclick="moForm()"><b>Chat cùng Sunsetious</b> <i
+                    class="far fa-horizontal-rule"></i> </button>
+            <div class="Chatbox" id="myForm">
+                <button class="nut-dong-chatbox" onclick="dongForm()"><b>Chat cùng Sunsetious</b> <i
+                        class="far fa-horizontal-rule"></i> </button>
+                <form action="" class="form-container">
+                    <div class="chuyenvien">
+                        <div><i class="fas fa-headset fa-2x"></i></div>
+                        <div><p id="tuvanvien"></p>
+                            <small>Chuyên viên tư vấn CSKH</small>
+                        </div>
+                    </div>
+                    <label for="msg"><b>Lời Nhắn</b></label>
+                    <textarea placeholder="Bạn hãy nhập lời nhắn.." name="msg" required></textarea>
+                    <button type="submit" class="btn">Bắt đầu chat</button>
+                </form>
+            </div>
+            <script>
+                var listtuvanvien = ['Nguyễn Thị Cẩm Tiên', 'Mai Trọng Dũng', 'Nguyễn Sỹ Trường','Đỗ Minh Tú','Dương Thị Ngân Giang'];
+                const buttonchatbox = document.querySelector('button[class="nut-mo-chatbox"')
+
+                function randomValueFromArray(array) {
+                    const random = Math.floor(Math.random() * array.length);
+                    return array[random];
+                }
+                function moForm() {
+                    document.getElementById('tuvanvien').innerHTML = randomValueFromArray(listtuvanvien);
+                    document.getElementById("myForm").style.display = "block";
+                    buttonchatbox.style.visibility = 'hidden';
+                }
+
+                function dongForm() {
+                    document.getElementById("myForm").style.display = "none";
+                    buttonchatbox.style.visibility = 'visible';
+                }
+            </script>
+    </main>
+
+    <footer>
+        <div class="rate">
+            <div class="box 1">
+                <img src="{% static 'images/footer/420517-holidays 1.png' %}" alt="icon gia tot sat ngay" />
+                <br><svg width="70" height="2">
+                    <line x1="0" y1="2" x2="70" y2="2"
+                        style="stroke: rgb(150, 150, 150); stroke-linecap:round; stroke-width:0.5;" />
+                </svg></br>
+                <p class="title">Giá tốt sát ngày</p>
+                <p>Cam kết giá tốt nhất khi đặt gần ngày cho chuyến đi của bạn.</p>
+            </div>
+            <div class="box 2">
+                <img src="{% static 'images/footer/420517-holidays 2.png' %}" alt="icon hon 8000 tour du lich" />
+                <br><svg width="70" height="2">
+                    <line x1="0" y1="2" x2="70" y2="2"
+                        style="stroke: rgb(150, 150, 150); stroke-linecap:round; stroke-width:0.5;" />
+                </svg></br>
+                <p class="title">Hơn 8000+ tour du lịch trên khắp cả nước</p>
+                <p>Hàng nghìn tour cho bạn thoải mái lựa chọn, giá cạnh tranh, phong phú.</p>
+            </div>
+
+            <div class="box 3">
+                <img src="{% static 'images/footer/420517-holidays 3.png' %}" alt="icon thanh toan de dang" />
+                <br><svg width="70" height="2">
+                    <line x1="0" y1="2" x2="70" y2="2"
+                        style="stroke: rgb(150, 150, 150); stroke-linecap:round; stroke-width:0.5;" />
+                </svg></br>
+                <p class="title">Thanh toán dễ dàng tiện lợi</p>
+                <p>Bao gồm thêm chuyển khoản ngân hàng và tiền mặt tại cửa hàng.</p>
+            </div>
+
+            <div class="box 4">
+                <img src="{% static 'images/footer/420517-holidays 4.png' %}" alt="icon nhieu dich vu khac" />
+                <br><svg width="70" height="2">
+                    <line x1="0" y1="2" x2="70" y2="2"
+                        style="stroke: rgb(150, 150, 150); stroke-linecap:round; stroke-width:0.5;" />
+                </svg></br>
+                <p class="title">Nhiều dịch vụ hỗ trợ du lịch khác</p>
+                <p>Có thêm nhiều dịch vụ hỗ trợ du lịch khác khiến cuộc vui trở nên toàn vẹn hơn.</p>
+            </div>
+        </div>
+        <div class="nhapdeal">
+            <div>
+                <img src="{% static 'images/footer/free-discount-icon-2045-thumb 1.png' %}">
+            </div>
+            <div class="noidung">
+                <div>
+                    <p class="title">Bạn muốn nhận ngay các deal giảm giá từ 50% khi đặt phòng, khách sạn?</p>
+                </div>
+                <div class="labelandinput">
+                    <form action="" class="formnhapdeal">
+                        <label for="Emailhoacsodienthoai"><b>Nhập email để nhận những chương trình
+                                khuyến mại mới nhất!</b></label>
+                        <div class="if">
+                        <textarea name="Emailhoacsodienthoai" placeholder="Nhập email của bạn"
+                            required></textarea>
+                        <button name="Dangki" type="submit">Đăng kí</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footerinfo">
+            <div class="info">
+                <img src="{% static 'images/footer/Logo.png' %}" style="width: 250px;height: 60px;" />
+                <p class="title">Công ty cổ phần du lịch Việt Nam Sunsetious</p>
+                <div class ="contact"><div><img src="{% static 'images/footer/phone.png' %}" /></div><p class="lienhe">Tổng đài chăm sóc: 1900 2901</p></div>
+                <p>Thông tin liên hệ:</p>
+                <a href=""><img src="{% static 'images/footer/Facebook.png' %}" /></a>
+                <a href=""><img src="{% static 'images/footer/IG.png' %}" /></a>
+                <a href=""><img src="{% static 'images/footer/Twitter.png' %}" /></a>
+                <a href=""><img src="{% static 'images/footer/Youtube.png' %}" /></a>
+                <div class ="contact"><div><img src="{% static 'images/footer/office.png' %}" /></div><p class="lienhe"> Văn phòng: Linh Trung, Thủ Đức </p></div>
+            </div>
+            <div class="padding">
+                <p class="title">Chính sách & qui định</p>
+                <p><a href="">Qui định thanh toán</a></p>
+                <p><a href="">Chính sách huỷ đơn đặt hàng</a></p>
+                <p><a href="">Qui chế hoạt động</a></p>
+                <p><a href="">Chính sách bảo mật</a></p>
+            </div>
+            <div class="padding">
+                <p class="title">Khách hàng & đối tác</p>
+                <p><a href="">Tuyển dụng</a></p>
+                <p><a href="">Đối tác</a></p>
+            </div>
+            <div><img src="{% static 'images/footer/139884-travel 1.png' %}" alt="icon ghế và dù ngoài biển"
+                    style="width: 200px;height: 180px;"></div>
+        </div>
+    </footer>
+
+
+    <script src="{% static 'js/base.js' %}"></script>
+    {% block linkjs %}{% endblock %}
+</body>
+
+
+</html>

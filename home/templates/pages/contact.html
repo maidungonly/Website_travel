@@ -1,0 +1,112 @@
+{% extends 'pages/base.html' %}
+
+{% load static %}
+
+{% block title%}Sunsetious | Thông tin cá nhân{% endblock %}
+
+{% block linkcss%}
+<link rel="stylesheet" href="{% static "css/contact-style.css" %}" type="text/css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+{% endblock %}
+{% block imgorsearch%}{% endblock %}
+{% block main%}<section class="link">
+    <a href="#">Trang chủ</a>
+    <span> > </span>
+    <a href="#"> Tài khoản </a>
+</section>
+
+<section class="nav">
+    <ul>
+        <li style="text-align:center"><a class="user" href="#" class="checked">Quản lí tài khoản</a><br>
+            <svg width="100" height="2">
+                <line x1="0" y1="0" x2="100" y2="0" style="stroke: #40B4E5; stroke-linecap:round; stroke-width:10px;" />
+            </svg>
+            </br></li>
+        <li><a class="user" href="/cart">Đơn hàng</a></li>
+    </ul>
+</section>
+
+<section class="container">
+
+    
+    <div class="contact1">
+        <form action="", method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+        <div class="avatar">
+            <div class="img-container">
+                {% if user.customer.profile_picture %}
+                    <img class='ava' src="{{user.customer.profile_picture}}" id="output" width="200" />
+                {% else %}
+                    <img class='ava' src="{%static "images/contact/avt.png"%}" id="output" width="200" />
+                {% endif %}
+                <!-- <img class='ava' src="{%static "images/contact/avt.png"%}" alt="ava"> -->
+                <button type="button" class="edit-ava">
+                    <label for="file"><i class="fas fa-camera"></i></label>
+                    <input name='profile' id="file" type="file" style="display:none;" onchange="loadFile(event)" />
+                    <input id='img-src' name='img-src' style="display: none;">
+                </button>
+                <script>
+                    var loadFile = function (event) {
+                    var image = document.getElementById("output");
+                    image.src = URL.createObjectURL(event.target.files[0]);
+                    };
+                    
+                </script>
+            </div>
+    
+        </div>
+        <div class="ttlh">
+            <h3>Thông tin liên hệ</h3>
+            
+                <label class='label' for="name"> Họ và tên <span class="red">*</span>:
+                    <br>
+                    <input type="text" name="name" id="name" placeholder={{user.customer.name}} value="{{user.customer.name}}">
+                </label>
+                <br><br>
+                <label for="phone">Số điện thoại <span class="red">*</span>:
+                    <input value="{{user.customer.phone_number}}" type="tel" name="phone" id="phone" placeholder="{{user.customer.phone_number}}" value='{{user.customer.phone_number}}'>
+                </label>
+                <br><br>
+                <label for="mail">Email <span class="red">*</span>:
+                    <input type="email" name="mail" id="mail" placeholder="{{user.customer.email}}" value="{{user.customer.email}}">
+                </label>
+                <br><br>
+        </div>
+        <div class="tttk">
+            <h3>Thông tin tài khoản</h3>
+                <label for="username">Tên đăng nhập:
+                    <br>
+                    <input disabled type="text" name="username" id="username" placeholder="{{user.username}}">
+                </label>
+                <br><br>
+                <label for="password">Mật khẩu:
+                    <input type="password" name="password1" id="password1" pattern=".{6,}" required>
+                </label>
+                <br><br>
+                <label for="password">Nhập lai Mật khẩu:
+                    <input value="" onchange="checkPassword(value)" type="password" name="password2" id="password2" pattern=".{6,}" required>
+                    <p style="color: red;" id='password-check'></p>
+                </label>
+                <script>
+                    function checkPassword(password2) {
+                        let password1 = document.getElementById('password1');
+                        let passwordChecker = document.getElementById('password-check');
+                        if (password2 !== password1.value) {
+                            passwordChecker.innerText = 'Mật khẩu không trùng khớp';
+                        }
+                        else {passwordChecker.innerText = '';}
+                    }
+                    
+                </script>
+                <br><br>
+                <button type="submit" class="blue">Lưu lại</button>
+        </form>
+        {% if messages %}
+        {% for message in messages %}
+          {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+        {% endfor %}
+        {% endif %}
+        </div>
+    </div>
+</section>{% endblock %}
+{% block linkjs %}{% endblock %}

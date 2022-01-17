@@ -1,0 +1,265 @@
+{% extends 'pages/base.html' %}
+
+{% load static %}
+
+{% block title%}Sunsetious Website{% endblock %}
+{% block linkcss%}
+<link rel="stylesheet" href="{% static "css/home.css" %}" type="text/css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+<link rel="stylesheet" href="{% static "css/owl.carousel.min.css"%}">
+<link rel="stylesheet" href="{% static "css/owl.theme.default.min.css"%}">
+{% endblock %}
+{% block imgorsearch%}
+<div class="slide__container">
+    <div class="animation" >
+        <img class="slide--items" src="{% static 'images/home/nong-truong-che-moc-chau-600a9fff49a89.png' %}">
+        <p class="slide--content"> Nói đến các đồi chè đẹp ở Việt Nam chắc chắn không thể nào bỏ qua Mộc Châu – vùng đất nổi tiếng với những thảm chè xanh uốn lượn mềm mại theo các sườn đồi và trải dài ngút ngàn tựa như không có điểm dừng..... </p>
+    </div>
+
+    <div class="animation">
+        <img class="slide--items" src="{%static 'images/home/Hungyen.png' %}">
+        <p class="slide--content"> Du khách như lạc vào không gian làng quê cổ kính khi trải nghiệm làng nghề đan đó 200 năm tuổi tại xã Thủ Sỹ, huyện Tiên Lữ, tỉnh Hưng Yên. </p>
+    </div>
+
+    <div class="animation">
+        <img  class="slide--items" src="{% static 'images/home/phoco.png'%}">
+        <p class="slide--content"> Phố cổ Hội An đẹp theo từng khoảnh khắc trong ngày, nhưng ấn tượng nhất phải kể đến khung cảnh phố đèn lồng Hội An. Giữa khung cảnh lung linh nơi phố Hội, du khách như lạc vào một xứ sở thần tiên đầy sắc màu đẹp đến kỳ ảo.</p>
+    </div>
+
+    <div  class="animation">
+        <img class="slide--items" src="{% static 'images/home/Quangphu.png' %}">
+        <p class="slide--content"> Làng nghề làm nhang (làng nghề tăm hương) Quảng Phú Cầu cách Hà Nội khoảng 30km, đã hình thành hơn 100 năm. Nơi đây lưu giữ những giá trị mang tính văn hoá, tâm linh, vừa giải quyết việc làm cho lao động địa phương....</p>
+    </div>
+    <br>
+<div class="animation__items">
+<span class="dot" onclick="currentSlide(0)"></span> 
+<span class="dot" onclick="currentSlide(1)"></span> 
+<span class="dot" onclick="currentSlide(2)"></span>
+<span class="dot" onclick="currentSlide(3)"></span>  
+</div>  
+</div>
+
+<div>
+    <h1 class="titlex">KHÁM PHÁ</h1>
+        <form class="form__edit">
+
+        <div class="form__items" >
+            <label for="place"><small>Địa điểm</small></label>
+            <input class="form_input" placeholder="Thành phố, khách sạn, điểm đến,.." name="place" required onfocus="this.placeholder = ''" onblur="this.placeholder = 'Thành phố, khách sạn, điểm đến,..'">
+        </div>
+
+        <div class="form__items" >
+            <label for="timego"><small>Thời gian đi</small></label>
+            <input class="form_input" type="date" name ="timego">
+        </div>
+
+        <div class="form__items" >
+            <label for="timeback"><small>Thời gian về</small></label>
+            <input class="form_input" type="date" name ="timeback">
+        </div>
+        <div class="form__button">
+        <button><i class="far fa-search fa-2x"></i></button>
+        </div>
+    </form>
+</div>
+{% endblock %}
+{% block main%}
+<section class="text__container">
+    <div class="text__content">
+        <h2 class = "center">DU LỊCH 3 MIỀN</h2>
+        <p>Cùng trải nghiệm dịch vụ du lịch cả 3 miền Bắc - Trung - Nam với chi phí cực rẻ. những món ăn đặc sản của từng vùng miền, phong cảnh núi non hùng vĩ hay những bãi biển xanh ngắt trải dài khắp dải đất việt Nam. Tham gia vào những hoạt động, lễ hội của người barnn địa. Chắc chắn sẽ là một chuyến du lịch đáng nhớ đối với bạn và người thân.</p>
+    </div>
+        
+    <div>
+            <img class="photo" src="{%static "images/home/dulich3mien-img.png" %}">
+    </div>
+</section>
+
+<section class="diadanh">
+	<h1 class ="diadanhtittle">Địa danh nổi tiếng</h1>
+	<div class="diadanh_container">
+		<div class = "buttonleft">
+			<button class="left" onclick="changeslidea(-1)"><i class="fas fa-angle-left fa-2x"
+				style="color: #494949"></i></button>
+		</div>
+		
+		<div class="diadanh_slide-gr">
+			<div class="diadanh_slides">
+			{% for area in areas %}
+				<div class="diadanh_slide">
+					<div class="diadanh_content">
+						<img src='{{area.image.url}}' class="areaimg">
+						<a class="areareview" href="/areareview">{{area.name}}</a>
+					</div>
+				</div>
+			{% endfor %}
+			</div>
+		</div>
+			<div class = "buttonright">
+				<button class="right" onclick="changeslidea(1)"><i class="fas fa-angle-right fa-2x"
+					style="color: #494949"></i></button>
+			</div>
+	</div>
+	<script>
+var slideas=document.querySelector('.diadanh_slides');
+var slidea=Array.from(document.querySelectorAll('.diadanh_slide'));
+var slideagr=document.querySelector('.diadanh_slide-gr');
+var button=document.querySelector('.left')
+var num_page
+
+function makeslidex(numberonetime) {
+    
+    var percentwidth_slide=100/numberonetime;
+    // tính độ dài của từng slide
+    num_page=Math.ceil(slidea.length/numberonetime);
+    // tính số lượng trang
+    slidea.forEach((el,index)=>{
+        el.style.width=(slideagr.offsetWidth/100*percentwidth_slide)+'px';
+        // set độ rộng của từng slide
+    })   
+    slideas.style.width=(slideagr.offsetWidth/100*percentwidth_slide)*slidea.length+'px';
+}
+makeslidex(4);
+
+var curpage = 1;
+function showslidea(pagenumber){
+    slideas.style.marginLeft=-(slideagr.offsetWidth*(pagenumber-1))+'px';
+}
+showslidea(1);
+
+function changeslidea(n){
+    curpage=curpage+n;
+    if(curpage<1) curpage=num_page;
+    if(curpage>num_page) curpage=1;
+    showslidea(curpage);
+}
+</script>
+</section>
+
+<!--<section class="tour_root">
+	
+	<div class="tour_container">
+		<div style="height: 480px;">
+		<h2 class="title_h1">TOUR GIẢM SỐC</h2>
+			<div class="tour-content owl-carousel owl-theme" id="one">-->
+			<section class = "tour_root">
+				<h1 class ="tourtittle">TOUR GIẢM SỐC</h1>
+				<div class="tour_container">
+					<div class = "buttonleft">
+						<button class="left" onclick="changeslide(-1)"><i class="fas fa-angle-left fa-2x"
+							style="color: #494949"></i></button>
+					</div>
+					
+					<div class="tour_slide-gr">
+						<div class="tour_slides">				
+									{% for product in products %}
+									<div class="tour_slide">			
+										<div class="tour-content-item item">
+										<img src='{{product.image.url}}' style="height: 190px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+										<div style="margin-top: 10px; height: 27px;">
+											<h3 style="text-align: center; font-size: 17px;">{{product.name}}</h3>
+											
+
+											<div class="tour__modified_1">
+											<i class="fas fa-heart" style="color: red; position: relative; top:12px;"></i>
+												<p class="box1">Yêu thích</p>
+											</div>	
+
+											<div class="tour__modified_2">
+												<i class="fas fa-map-marker-alt fa-lg" style="color:#D95642;"></i>
+												<p class="box2">{{product.location}}</p>
+											</div>	
+											<div class="tour__modified_3">
+												<i class="fas fa-fire" style="color: #DF0029;"></i>
+												<p class="box3">Bán chạy</p>
+											</div>					
+										</div>
+									<div class="tour__modified_4">
+										<div class="vote">
+											<i class="fas fa-star" style="color: #FBBB00;"></i>
+											<p style="margin:0px; color: #40B4E5"> {{product.stars}}</p>
+										</div>
+										<div style="border-right: 1px solid;">
+											<p style="margin:0px;">{{product.n_reviews}} đánh giá</p>
+										</div>
+										<p style="margin:0px;">{{product.views}} xem</p>
+									</div>
+										<div style="text-align: center;">
+													<h3 style="color: blue; font-size: 15px; margin-top:10px; margin-bottom:10px">Giá: {{product.price}} VNĐ</h3>
+												<button class="tour_button"><a href='/book_tour/{{product.slug}}' > Xem ngay</a></button>
+										</div>
+											</div>
+										</div>
+									{% endfor %}
+							</div>
+						</div>
+			
+					<div class = "buttonright">
+					<button class="right" onclick="changeslide(1)"><i class="fas fa-angle-right fa-2x"
+						style="color: #494949"></i></button>
+					</div>
+				</div>	
+	<script>
+			function change(){
+				window.location.href = '/book_tour';
+			}
+	</script>
+	<script>
+	var slides=document.querySelector('.tour_slides');
+	var slide=Array.from(document.querySelectorAll('.tour_slide'));
+	var slidegr=document.querySelector('.tour_slide-gr');
+	var num_page
+	
+	function makeslide(numberonetime) {
+		
+		var percentwidth_slide=100/numberonetime;
+		// tính độ dài của từng slide
+		num_page=Math.ceil(slide.length/numberonetime);
+		// tính số lượng trang
+		slide.forEach((el,index)=>{
+			el.style.width=(slidegr.offsetWidth/100*percentwidth_slide)+'px';
+			// set độ rộng của từng slide
+		})   
+		slides.style.width=(slidegr.offsetWidth/100*percentwidth_slide)*slide.length+'px';
+	}
+	makeslide(3);
+	
+	var curpage = 1;
+	function showslide(pagenumber){
+		slides.style.marginLeft=-(slidegr.offsetWidth*(pagenumber-1))+'px';
+	}
+	showslide(1);
+	
+	function changeslide(n){
+		curpage=curpage+n;
+		if(curpage<1) curpage=num_page;
+		if(curpage>num_page) curpage=1;
+		showslide(curpage);
+	}
+	</script>				
+</section>
+{%endblock%}
+
+{%block linkjs%}
+<script type="text/javascript" src="{% static "js/home.js" %}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="{%static "js/owl.carousel.min.js" %}"></script>
+<script >
+	$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:3
+        }
+    }
+})
+</script>
+{%endblock%}

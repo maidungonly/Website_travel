@@ -1,0 +1,1265 @@
+{% extends 'pages/base.html' %}
+
+{% load static %}
+
+{% block title%}Sunsetious | Thành phố Hồ Chí Minh{% endblock %}
+
+{% block linkcss%}
+<link rel="stylesheet" href="{% static "css/areareview.css" %}" type="text/css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+<link rel="stylesheet" href="{% static "css/owl.carousel.min.css"%}">
+<link rel="stylesheet" href="{% static "css/owl.theme.default.min.css"%}">
+{% endblock %}
+{% block imgorsearch%}
+<div class="header_picture">
+    <img class="header_picture-item" src="{%static "images/areareview/nha-tho.jpg"%}">
+    <div class="header_slogan">
+        <h1 class="header_h1">THÀNH PHỐ HỒ CHÍ MINH</h2>
+        <h2 class="header_h2">cùng SUNSETIOUS</h3>
+    </div>
+</div>{% endblock %}
+{% block main%}
+<section class="paragraph_container">
+    <div class="paragraph_review">
+        <h1 class="paragraph_h1" >GIỚI THIỆU</h1>
+    </div>
+
+    <div class="subparagraph_container">
+        <p class="subparagraph">
+            Hiện nay thành phố Hồ Chí Minh là trung tâm du lịch lớn nhất đất nước, thu hút hàng năm 70% lượng khách quốc tế đến việt Nam. Sở dĩ như vậy vì ngoài cơ sở hạ tầng khá tốt, giao thông tương đối thuận tiện, thành phố là một nơi có tài nguyên du lịch phong phú. Nơi đây là vùng đất găn liền với lịch sử đấu tranh giành độc lập của dân tộc kể từ khi thực dân Pháp đặt chân lên Việt Nam. Thành phố Hồ Chí Minh cũng là nơi Chủ tịch Hồ Chí Minh vĩ đại ra đi tìm đường cứu nước (1911).
+        </p>
+        <br>
+        <p class="subparagraph">
+            Gắn liền với sự kiện đó, cảng Nhà Rồng và Bảo tàng Hồ Chí Minh là một di tích quan trọng, thu hút nhiều khách du lịch trong và ngoài nước. Các di tích cách mạng khác như địa đạo Củ Chi, hệ thống các bảo tàng, nhà hát, nhà văn hóa, các công trình kiến trúc thời Pháp là những điểm du lịch hấp dẫn. Gần đây thành phố đã đầu tư nhiều khu du lịch như Thanh Đa, Bình Quới, nhiều khu vui chơi giải trí như Đầm Sen, Kỳ Hòa, công viên Nước, Suối Tiên,... đã thu hút và hấp dẫn du khách. Hiện nay, thành phố đang tiến hành tôn tạo các di tích lịch sử, các công trình kiến trúc cổ, đầu tư cho hệ thống bảo tàng, khôi phục nền văn hóa truyền thống kết hợp với tổ chức các lễ hội, khôi phục văn hóa miệt vườn, làng hoa để phát triển một cách vững chắc ngành du lịch ở thành phố.
+        </p>
+    </div>
+</section>
+
+
+<!-- khu vui chơi ở TP HCM -->
+<section class="tour_root">
+<div class="tour_container">
+    <div>
+    <h1 class="title_h1">THÀNH PHỐ HCM CÓ GÌ CHƠI?</h1>
+        <div class="tour-content owl-carousel owl-theme">
+            
+
+                <div class="tour-content-item item">
+                    <img src="{%static "images/areareview/area/ben-nha-rong.jpg"%}" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">Bến Nhà Rồng - Di tích lịch sử</h3>
+                        
+
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <i class="fas fa-map-marker-alt fa-lg" style="color:#D95642;"></i>
+                        <p class="box2">Quận 6</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>	
+                    
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: #FBBB00;"></i>
+                            <p style="color: #40B4E5"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="margin: 0px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="margin: 0px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px;">Giá: 200,000 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>	
+
+            <div class="tour-content-item item">
+                    <img src="area/nha-tho-duc-ba.jpg" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">Nhà thờ Đức Bà</h3>					
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <img src="dia-diem.png" style="width: 19px; height: 17px; position: relative; bottom: 1px;">
+                        <p class="box2">Quận 6</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>							
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: yellow; position: relative; bottom: 6px;"></i>
+                            <p style="position: relative; bottom: 6px;"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="padding: 5px; position: relative; bottom: 6px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="padding: 5px; position: relative; bottom: 6px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px; padding: 7px;">Giá: 100,000 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>	
+
+                <div class="tour-content-item item">
+                    <img src="area/dai-nam.jpg" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">Khu du lịch Đại Nam</h3>
+                        
+
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <img src="dia-diem.png" style="width: 19px; height: 17px; position: relative; bottom: 1px;">
+                        <p class="box2">Quận 6</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>						
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: yellow; position: relative; bottom: 6px;"></i>
+                            <p style="position: relative; bottom: 6px;"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="padding: 5px; position: relative; bottom: 6px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="padding: 5px; position: relative; bottom: 6px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px; padding: 7px;">Giá: 200,000 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>
+
+                    <div class="tour-content-item item">
+                    <img src="area/suoi-tien.jpg" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">Khu du lịch suối tiên</h3>
+                        
+
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <img src="dia-diem.png" style="width: 19px; height: 17px; position: relative; bottom: 1px;">
+                        <p class="box2">Quận 6</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>					
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: yellow; position: relative; bottom: 6px;"></i>
+                            <p style="position: relative; bottom: 6px;"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="padding: 5px; position: relative; bottom: 6px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="padding: 5px; position: relative; bottom: 6px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px; padding: 7px;">Giá: 400,000 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>	
+
+                    <div class="tour-content-item item">
+                    <img src="area/dam-sen.jpg" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">Công viên văn hóa Đầm Sen</h3>
+                        
+
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <img src="dia-diem.png" style="width: 19px; height: 17px; position: relative; bottom: 1px;">
+                        <p class="box2">Quận 6</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>						
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: yellow; position: relative; bottom: 6px;"></i>
+                            <p style="position: relative; bottom: 6px;"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="padding: 5px; position: relative; bottom: 6px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="padding: 5px; position: relative; bottom: 6px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px; padding: 7px;">Giá: 300,000 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>
+
+                    <div class="tour-content-item item">
+                    <img src="area/thao-cam-vien.jpg" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">Tour tham quan Thảo Cầm Viên</h3>
+                        
+
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <img src="dia-diem.png" style="width: 19px; height: 17px; position: relative; bottom: 1px;">
+                        <p class="box2">Quận 1</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>						
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: yellow; position: relative; bottom: 6px;"></i>
+                            <p style="position: relative; bottom: 6px;"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="padding: 5px; position: relative; bottom: 6px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="padding: 5px; position: relative; bottom: 6px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px; padding: 7px;">Giá: 230,000 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>	
+
+                    <div class="tour-content-item item">
+                    <img src="area/dinh-doc-lap.jpg" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">Tour tham quan Dinh Độc Lập</h3>
+                        
+
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red; "></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <img src="dia-diem.png" style="width: 19px; height: 17px; position: relative; bottom: 1px;">
+                        <p class="box2">Quận 1</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>						
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: yellow; position: relative; bottom: 6px;"></i>
+                            <p style="position: relative; bottom: 6px;"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="padding: 5px; position: relative; bottom: 6px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="padding: 5px; position: relative; bottom: 6px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px; padding: 7px;">Giá: 150,000 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>		
+</div>
+</section>
+
+<!-- Địa điểm ăn uống không thể bỏ qua -->
+<section class="tour_root">
+
+<div class="tour_container">
+    <div>
+    <h1 class="title_h1">ĐỊA ĐIỂM ĂN UỐNG KHÔNG THỂ BỎ QUA</h1>
+        <div class="tour-content owl-carousel owl-theme">
+            
+
+                <div class="tour-content-item item">
+                    <img src="nha-hang/lau-cua-khoi-thd-1.jpg" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">Lẩu cua khôi</h3>
+                        
+
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <img src="dia-diem.png" style="width: 19px; height: 17px; position: relative; bottom: 1px;">
+                        <p class="box2">Quận 1</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>	
+                    
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: yellow; position: relative; bottom: 6px;"></i>
+                            <p style="position: relative; bottom: 6px;"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="padding: 5px; position: relative; bottom: 6px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="padding: 5px; position: relative; bottom: 6px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px; padding: 7px;">Giá: 400,000 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>	
+
+            <div class="tour-content-item item">
+                    <img src="nha-hang/Sofitel-sai-gon.jpg" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">Sofitel Sài Gòn - Buffet hải sản</h3>					
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <img src="dia-diem.png" style="width: 19px; height: 17px; position: relative; bottom: 1px;">
+                        <p class="box2">Quận 3</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>							
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: yellow; position: relative; bottom: 6px;"></i>
+                            <p style="position: relative; bottom: 6px;"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="padding: 5px; position: relative; bottom: 6px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="padding: 5px; position: relative; bottom: 6px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px; padding: 7px;">Giá: 850,000 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>	
+
+                <div class="tour-content-item item">
+                    <img src="nha-hang/pachi-pachi.jpg" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">Pachi Pachi</h3>
+                        
+
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <img src="dia-diem.png" style="width: 19px; height: 17px; position: relative; bottom: 1px;">
+                        <p class="box2">Quận 5</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>						
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: yellow; position: relative; bottom: 6px;"></i>
+                            <p style="position: relative; bottom: 6px;"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="padding: 5px; position: relative; bottom: 6px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="padding: 5px; position: relative; bottom: 6px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px; padding: 7px;">Giá: 650,000 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>
+
+                    <div class="tour-content-item item">
+                    <img src="nha-hang/buffet.jpg" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">JJ's Brazillian BBQ</h3>
+                        
+
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <img src="dia-diem.png" style="width: 19px; height: 17px; position: relative; bottom: 1px;">
+                        <p class="box2">Quận 2</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>					
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: yellow; position: relative; bottom: 6px;"></i>
+                            <p style="position: relative; bottom: 6px;"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="padding: 5px; position: relative; bottom: 6px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="padding: 5px; position: relative; bottom: 6px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px; padding: 7px;">Giá: 400,000 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>	
+
+                    <div class="tour-content-item item">
+                    <img src="nha-hang/sushi.jpg" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">Sushi Dining AOI</h3>
+                        
+
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <img src="dia-diem.png" style="width: 19px; height: 17px; position: relative; bottom: 1px;">
+                        <p class="box2">Quận 7</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>						
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: yellow; position: relative; bottom: 6px;"></i>
+                            <p style="position: relative; bottom: 6px;"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="padding: 5px; position: relative; bottom: 6px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="padding: 5px; position: relative; bottom: 6px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px; padding: 7px;">Giá: 300,000 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>	
+
+                    <div class="tour-content-item item">
+                    <img src="nha-hang/goc-hue.jpg" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">Nhà hàng góc Huế</h3>
+                        
+
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <img src="dia-diem.png" style="width: 19px; height: 17px; position: relative; bottom: 1px;">
+                        <p class="box2">Quận 3</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>						
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: yellow; position: relative; bottom: 6px;"></i>
+                            <p style="position: relative; bottom: 6px;"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="padding: 5px; position: relative; bottom: 6px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="padding: 5px; position: relative; bottom: 6px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px; padding: 7px;">Giá: 400,000 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>	
+
+                    <div class="tour-content-item item">
+                    <img src="nha-hang/soa-soa.jpg" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">Lẩu Soa Soa</h3>
+                        
+
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <img src="dia-diem.png" style="width: 19px; height: 17px; position: relative; bottom: 1px;">
+                        <p class="box2">Quận 3</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>						
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: yellow; position: relative; bottom: 6px;"></i>
+                            <p style="position: relative; bottom: 6px;"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="padding: 5px; position: relative; bottom: 6px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="padding: 5px; position: relative; bottom: 6px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px; padding: 7px;">Giá: 600,000 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>	
+</div>
+                
+</section>
+
+<!-- tour hấp dẫn -->
+<section class="tour_root">
+
+<div class="tour_container">
+    <div>
+    <h1 class="title_h1">TOUR DU LỊCH HẤP DẪN</h1>
+        <div class="tour-content owl-carousel owl-theme">
+            
+
+                <div class="tour-content-item item">
+                    <img src="area/cu-chi.jpg" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">Tour đi Địa đạo Củ Chi</h3>
+                        
+
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <img src="dia-diem.png" style="width: 19px; height: 17px; position: relative; bottom: 1px;">
+                        <p class="box2">Quận Củ Chi</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>	
+                    
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: yellow; position: relative; bottom: 6px;"></i>
+                            <p style="position: relative; bottom: 6px;"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="padding: 5px; position: relative; bottom: 6px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="padding: 5px; position: relative; bottom: 6px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px; padding: 7px;">Giá: 500,000 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>	
+
+            <div class="tour-content-item item">
+                    <img src="area/xe-may.jpg" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">Tham quan Sài Gòn bằng xe máy</h3>					
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <img src="dia-diem.png" style="width: 19px; height: 17px; position: relative; bottom: 1px;">
+                        <p class="box2">Sài Gòn</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>							
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: yellow; position: relative; bottom: 6px;"></i>
+                            <p style="position: relative; bottom: 6px;"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="padding: 5px; position: relative; bottom: 6px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="padding: 5px; position: relative; bottom: 6px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px; padding: 7px;">Giá: 500,000 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>	
+
+                <div class="tour-content-item item">
+                    <img src="area/sg-old.jpg" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">Tour khám phá Sài Gòn cũ</h3>
+                        
+
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <img src="dia-diem.png" style="width: 19px; height: 17px; position: relative; bottom: 1px;">
+                        <p class="box2">Sài Gòn</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>						
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: yellow; position: relative; bottom: 6px;"></i>
+                            <p style="position: relative; bottom: 6px;"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="padding: 5px; position: relative; bottom: 6px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="padding: 5px; position: relative; bottom: 6px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px; padding: 7px;">Giá: 650,000 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>
+
+                    <div class="tour-content-item item">
+                    <img src="area/song-mekong.jpg" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">Tour khám phá sông Mê Kông</h3>
+                        
+
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <img src="dia-diem.png" style="width: 19px; height: 17px; position: relative; bottom: 1px;">
+                        <p class="box2">Vĩnh Long</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>					
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: yellow; position: relative; bottom: 6px;"></i>
+                            <p style="position: relative; bottom: 6px;"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="padding: 5px; position: relative; bottom: 6px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="padding: 5px; position: relative; bottom: 6px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px; padding: 7px;">Giá: 700,000 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>	
+
+                    <div class="tour-content-item item">
+                    <img src="area/bttp.jpg" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">Tour bảo tàng TP.HCM</h3>
+                        
+
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <img src="dia-diem.png" style="width: 19px; height: 17px; position: relative; bottom: 1px;">
+                        <p class="box2">Quận 7</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>						
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: yellow; position: relative; bottom: 6px;"></i>
+                            <p style="position: relative; bottom: 6px;"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="padding: 5px; position: relative; bottom: 6px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="padding: 5px; position: relative; bottom: 6px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px; padding: 7px;">Giá: 300,000 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>	
+</div>
+                
+</section>
+
+<!-- khách sạn -->
+<section class="tour_root">
+
+<div class="tour_container">
+    <div>
+    <h1 class="title_h1">ĐẶT KHÁCH SẠN</h1>
+        <div class="tour-content owl-carousel owl-theme">
+            
+
+                <div class="tour-content-item item">
+                    <img src="hotel/bonita.jpg" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">Khách sạn Bonita Sigture</h3>
+                        
+
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <img src="dia-diem.png" style="width: 19px; height: 17px; position: relative; bottom: 1px;">
+                        <p class="box2">Quận Phú Nhuận</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>	
+                    
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: yellow; position: relative; bottom: 6px;"></i>
+                            <p style="position: relative; bottom: 6px;"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="padding: 5px; position: relative; bottom: 6px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="padding: 5px; position: relative; bottom: 6px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px; padding: 7px;">Giá: 1,540,000 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>	
+
+            <div class="tour-content-item item">
+                    <img src="hotel/moc-lan.jpg" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">Khách sạn Mộc Lan</h3>					
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <img src="dia-diem.png" style="width: 19px; height: 17px; position: relative; bottom: 1px;">
+                        <p class="box2">Quận Bình Thạnh</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>							
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: yellow; position: relative; bottom: 6px;"></i>
+                            <p style="position: relative; bottom: 6px;"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="padding: 5px; position: relative; bottom: 6px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="padding: 5px; position: relative; bottom: 6px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px; padding: 7px;">Giá: 1,400,000 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>	
+
+                <div class="tour-content-item item">
+                    <img src="hotel/reverie.jpg" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">Khách sạn The Reverie</h3>
+                        
+
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <img src="dia-diem.png" style="width: 19px; height: 17px; position: relative; bottom: 1px;">
+                        <p class="box2">Quận 10</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>						
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: yellow; position: relative; bottom: 6px;"></i>
+                            <p style="position: relative; bottom: 6px;"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="padding: 5px; position: relative; bottom: 6px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="padding: 5px; position: relative; bottom: 6px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px; padding: 7px;">Giá: 1,200,000 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>
+
+                    <div class="tour-content-item item">
+                    <img src="hotel/relax.jpg" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">Khách sạn Relax Royol</h3>
+                        
+
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <img src="dia-diem.png" style="width: 19px; height: 17px; position: relative; bottom: 1px;">
+                        <p class="box2">Quận 5</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>					
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: yellow; position: relative; bottom: 6px;"></i>
+                            <p style="position: relative; bottom: 6px;"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="padding: 5px; position: relative; bottom: 6px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="padding: 5px; position: relative; bottom: 6px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px; padding: 7px;">Giá: 2,500,000 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>	
+
+                    <div class="tour-content-item item">
+                    <img src="hotel/continental.png" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">Khách sạn Continental</h3>
+                        
+
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <img src="dia-diem.png" style="width: 19px; height: 17px; position: relative; bottom: 1px;">
+                        <p class="box2">Quận 1</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>						
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: yellow; position: relative; bottom: 6px;"></i>
+                            <p style="position: relative; bottom: 6px;"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="padding: 5px; position: relative; bottom: 6px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="padding: 5px; position: relative; bottom: 6px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px; padding: 7px;">Giá: 2,750,000 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>	
+
+                    <div class="tour-content-item item">
+                    <img src="hotel/sofitel.jpg" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">Khách sạn Sofitel Saigon Plaza</h3>
+                        
+
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <img src="dia-diem.png" style="width: 19px; height: 17px; position: relative; bottom: 1px;">
+                        <p class="box2">Quận 7</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>						
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: yellow; position: relative; bottom: 6px;"></i>
+                            <p style="position: relative; bottom: 6px;"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="padding: 5px; position: relative; bottom: 6px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="padding: 5px; position: relative; bottom: 6px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px; padding: 7px;">Giá: 1,970,000 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>	
+
+                    <div class="tour-content-item item">
+                    <img src="hotel/lotte.jpg" style="height: 150px; width:271px; border-radius: 22px 19px 0 0; position: relative; right: 2px;">	
+                    <div style="margin-top: 10px; height: 27px;">
+                        <h3 style="text-align: center; font-size: 17px;">Khách sạn Lotte Legend Saigon</h3>
+                        
+
+                    <div class="tour__modified_1">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                            <p class="box1">Yêu thích</p>
+                        </div>	
+
+                    <div class="tour__modified_2">
+                        <i class="fas fa-map-marker-alt fa-lg" style="color:#D95642;"></i>
+                        <p class="box2">Quận 1</p>
+                    </div>	
+                    <div class="tour__modified_3">
+                        <i class="fas fa-fire" style="color: #DF0029;"></i>
+                        <p class="box3">Bán chạy</p>
+                    </div>						
+                </div>
+                <div class="tour__modified_4">
+                            <div class="vote">
+                                <i class="fas fa-star" style="color: yellow; position: relative; bottom: 6px;"></i>
+                            <p style="position: relative; bottom: 6px;"> 4.5</p>
+                            </div>
+                            <div style="border-right: 1px solid;">
+                                <p style="padding: 5px; position: relative; bottom: 6px;">2,453 đánh giá</p>
+                            </div>
+                            <p style="padding: 5px; position: relative; bottom: 6px;">3N+ xem</p>
+                        </div>
+                            
+                            <div style="text-align: center;">
+                                <h3 style="color: blue; font-size: 15px; padding: 7px;">Giá: 2,276,311 VNĐ</h3>
+                            <button class="tour_button"> Đặt ngay</button>
+                            </div>
+                    </div>	
+</div>
+                
+</section>
+
+<!-- cảm nhận về tphcm -->
+<section class="comment_root">
+<div class="comment_container ">
+
+    <h1 id="commnet_container-h1" >CẢM NHẬN VỀ THÀNH PHỐ HỒ CHÍ MINH</h1>
+<div class="comment-content owl-carousel owl-theme" id="one">
+    <div class="subcomment item">
+    <img src="tu-do.jpg" style="width:100px; height: 100px; border-radius: 50%; position: relative; left: 110px;">
+    <div style="position: relative; top: 5px; left: 95px; margin: 10px 0;"> 			
+        <p style="font-size:30px; font-weight: bold; position: relative; left: 25px;"> Tú Đỗ </p>
+        <div class = "icon"> 
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+        </div>
+        <p style="font-size: 10px;">(Đánh giá vào ngày 7/10/2021)</p>
+    </div>
+    <p style="display: grid; grid-template-columns: 1fr; padding: 10px; text-align: justify;">Thành phố đẹp lắm, lần đầu vào Sài Gòn chơi, mình rất hào hứng đến nỗi hôm trước khi đi không ngủ được. Nhưng may mắn mình đã tin tưởng và chọn dịch vụ tại đây nên rất tuyệt vời. Mọi người hãy đến Sài Gòn chơi thử 1 lần nha. Quan trọng là phải có tiền như mình mới đi được ó</p>
+
+</div>
+
+<div class="subcomment item">
+    <div><img src="tien.jpg" style="width:100px; height: 100px; border-radius: 50%; position: relative; left: 110px;" ></div>
+    <div style="position: relative; top: 5px; left: 95px; margin: 10px 0;"> 			
+        <p style="font-size:30px; font-weight: bold;"> Cẩm Tiên </p>
+        <div class = "icon"> 
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+        </div>
+        <p style="font-size: 10px;">(Đánh giá vào ngày 7/8/2021)</p>
+    </div>
+    <p style="display: grid; grid-template-columns: 1fr; padding: 10px; text-align: justify;">Thành phố đẹp lắm, lần đầu vào Sài Gòn chơi, mình rất hào hứng đến nỗi hôm trước khi đi không ngủ được. Nhưng may mắn mình đã tin tưởng và chọn dịch vụ tại đây nên rất tuyệt vời. Mọi người hãy đến Sài Gòn chơi thử 1 lần nha. Quan trọng là phải có tiền như mình mới đi được ó</p>
+
+</div>
+
+<div class="subcomment item">
+    <img src="dung.jpg" style="width:100px; height: 100px; border-radius: 50%; position: relative; left: 110px;">
+    <div style="position: relative; top: 5px; left: 95px; margin: 10px 0;"> 			
+        <p style="font-size:30px; font-weight: bold;"> Mai Dũng </p>
+        <div class = "icon"> 
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+        </div>
+        <p style="font-size: 10px;">(Đánh giá vào ngày 7/10/2021)</p>
+    </div>
+    <p style="display: grid; grid-template-columns: 1fr; padding: 10px; text-align: justify;">Thành phố đẹp lắm, lần đầu vào Sài Gòn chơi, mình rất hào hứng đến nỗi hôm trước khi đi không ngủ được. Nhưng may mắn mình đã tin tưởng và chọn dịch vụ tại đây nên rất tuyệt vời. Mọi người hãy đến Sài Gòn chơi thử 1 lần nha. Quan trọng là phải có tiền như mình mới đi được ó</p>
+
+</div>
+
+<div class="subcomment item">
+    <img src="giang.jpg" style="width:100px; height: 100px; border-radius: 50%; position: relative; left: 110px;">
+    <div style="position: relative; top: 5px; left: 95px; margin: 10px 0;"> 			
+        <p style="font-size:30px; font-weight: bold;"> Ngân Giang </p>
+        <div class = "icon"> 
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+        </div>
+        <p style="font-size: 10px;">(Đánh giá vào ngày 2/11/2021)</p>
+    </div>
+    <p style="display: grid; grid-template-columns: 1fr; padding: 10px; text-align: justify;">Thành phố đẹp lắm, lần đầu vào Sài Gòn chơi, mình rất hào hứng đến nỗi hôm trước khi đi không ngủ được. Nhưng may mắn mình đã tin tưởng và chọn dịch vụ tại đây nên rất tuyệt vời. Mọi người hãy đến Sài Gòn chơi thử 1 lần nha. Quan trọng là phải có tiền như mình mới đi được ó</p>
+
+</div>
+
+<div class="subcomment item">
+    <img src="dark_face.jpg" style="width:100px; height: 100px; border-radius: 50%; position: relative; left: 110px;">
+    <div style="position: relative; top: 5px; left: 95px; margin: 10px 0;"> 			
+        <p style="font-size:30px; font-weight: bold;"> Sỹ Trường </p>
+        <div class = "icon"> 
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+        </div>
+        <p style="font-size: 10px;">(Đánh giá vào ngày 7/11/2021)</p>
+    </div>
+    <p style="display: grid; grid-template-columns: 1fr; padding: 10px; text-align: justify;">Thành phố đẹp lắm, lần đầu vào Sài Gòn chơi, mình rất hào hứng đến nỗi hôm trước khi đi không ngủ được. Nhưng may mắn mình đã tin tưởng và chọn dịch vụ tại đây nên rất tuyệt vời. Mọi người hãy đến Sài Gòn chơi thử 1 lần nha. Quan trọng là phải có tiền như mình mới đi được ó</p>
+
+</div>
+</div>
+</div>
+                
+</section>
+
+<!-- những địa điểm khác -->
+<section class="other_root">
+<div class="other_container">
+<h1 id="commnet_container-h1" >CÁC ĐỊA ĐIỂM DU LỊCH KHÁC</h1>
+<div class="other-content owl-carousel owl-theme" id="two">
+<div class="sub_other item">
+    <img src="other/da-nang.jpg" style="border-radius: 17px; height: 240px;">
+    <p class="other_text">Đà Nẵng</p>
+</div>
+<div class="sub_other item">
+    <img src="other/hoi-an.jpg" style="border-radius: 17px; height: 240px;">
+    <p class="other_text">Hội An</p>
+</div>
+<div class="sub_other item">
+    <img src="other/hue.jpg" style="border-radius: 17px; height: 240px;">
+    <p class="other_text">Huế</p>
+</div>
+<div class="sub_other item">
+    <img src="other/nha-trang.jpg" style="border-radius: 17px; height: 240px;">
+    <p class="other_text">Nha Trang</p>
+</div>
+<div class="sub_other item">
+    <img src="other/phu-quoc.jpg" style="border-radius: 17px; height: 240px;">
+    <p class="other_text">Phú Quốc</p>
+</div>
+<div class="sub_other item">
+    <img src="other/sapa.jpg" style="border-radius: 17px; height: 240px;">
+    <p class="other_text">SAPA</p>
+</div>
+<div class="sub_other item">
+    <img src="other/vinh-ha-long.jpg" style="border-radius: 17px; height: 240px;">
+    <p class="other_text">Vịnh Hạ Long</p>
+</div>
+<div class="sub_other item">
+    <img src="other/vung-tau.jpg" style="border-radius: 17px; height: 240px;">
+    <p class="other_text">Vũng Tàu</p>
+</div>
+
+</div>
+</div>
+
+</section>
+{% endblock %}
+{% block linkjs %}
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="{%static "js/owl.carousel.min.js" %}"></script>
+<script >
+	$(document).ready(function() {
+ var two = $('#two')
+   two.owlCarousel({
+     loop:true,
+    margin:10,
+    nav:false,
+    dots:false,
+    autoplay:true,
+    autoplayTimeout:1000,
+    responsiveClass:true,        
+     navText:['<i class="fas fa-chevron-circle-left nav_icon"></i>','<i class="fas fa-chevron-circle-right nav_icon"></i>'],
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:5,
+            nav:false
+           
+        }
+    }   
+       
+});
+
+ var one = $('#one');
+   one.owlCarousel({
+     
+      margin:15,
+      items:4,
+      nav:false,
+      autoplay:true,
+      autoplayTimeout:3000,
+      dots:false,
+  
+        loop:true,
+        center:true,
+        
+        URLhashListener:true,
+        autoplayHoverPause:true,
+        startPosition: 'URLHash',
+       navText:['<i class="fas fa-chevron-circle-left nav_icon"></i>','<i class="fas fa-chevron-circle-right nav_icon"></i>'],
+       responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:3
+        }
+    }
+   });
+
+	$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    dots:false,
+    navText:['<i class="fas fa-chevron-circle-left nav_icon"></i>','<i class="fas fa-chevron-circle-right nav_icon"></i>'],
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:3
+        }
+    }
+})
+});
+
+</script>
+{% endblock %}

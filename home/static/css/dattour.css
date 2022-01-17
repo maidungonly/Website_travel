@@ -1,0 +1,220 @@
+/* ===========================CAI DAT FONT CHU ======================= */
+
+@font-face {
+    font-family: font_nomal;
+    src: url(../font/Quicksand-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: font_regular;
+    src: url(../font/Quicksand-Regular.ttf);
+}
+
+@font-face {
+    font-family: font_bold;
+    src: url(../font/Quicksand-Bold.ttf);
+}
+
+@font-face {
+    font-family: font_light;
+    src: url(../font/Quicksand-Light.ttf);
+}
+
+/* ===============CAI DAT NOI DUNG TONG THE CHO TRANG WEB=================== */
+main{
+    margin-bottom: 2rem;
+}
+/* =====================
+MAIN
+===================== */
+
+.nhatho{
+    width: 100%;
+    margin-top: -20px;
+}
+
+.main_1{
+    position: relative;
+    left: 4rem;
+}
+
+#Star{
+    width: 20px;
+}
+
+h1{
+    font-size: 2.2rem;
+    font-family: font_bold;
+}
+
+.dieukien p,.Xuathd p, .time p, .Ngonngu p{
+    display: inline-block;
+    position: relative;
+    bottom: 10px;
+    font-family: font_regular;
+    font-size: 15px;
+}
+.Xuathd,.time,.Ngonngu{
+    display: flex;
+    align-items: center;
+}
+.time, .Ngonngu{
+    position: relative;
+    bottom: 5px;
+}
+
+.dieukien2{
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+}
+
+.chinhsach{
+    border-top: 1px solid #636262;
+    border-bottom: 1px solid #636262;
+    width: 95%;
+}
+
+.thongtindd li, .ttdd p, .uudai{
+ font-size: 1.1rem;
+}
+.thongtindd{
+    padding-left: 1.2rem;
+}
+h2{
+    border-left: 4px solid #FBBB00;
+    padding-left: 5px;
+    margin-left: 0px;
+    font-family: font_bold;
+}
+.ttdd p,.uudai{
+    padding-left: 1.5rem;
+    line-height: 1.6rem;
+
+}
+.uudaibuaan{
+    padding-left: 2rem;
+}
+/* ================================THANH TOAN==================== */
+.giamgia {
+    margin-bottom: 2rem;
+}
+.giamgia form{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    margin-top: 1rem;
+}
+.flex-center{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+
+.thanhtoandh p{
+    font-size: 1.1rem;
+    font-family: font_light;
+}
+.thanhtoandh a, .giamgia a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color:#000000;
+} 
+.thongtindathang a{
+    display: block;
+}
+.inputsale{
+    border: 1px solid gainsboro;
+    width: 70%;
+    border-radius: 5px;
+    height: 40px;
+    background-color: aliceblue;
+    font-size: 1rem;
+}
+.magiamgia a{
+    margin-bottom: 20px;
+}
+
+.apdung{
+    border-style: solid;
+    border-color: #FBBB00;
+    padding: 3px;
+    border-radius: 10px;
+    background: #FBBB00;   
+    width: 20%;
+    height: 40px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.apdung:hover{
+    color:#ffffff;
+    font-family: font_bold;
+}
+
+.buy{
+  text-decoration: none;
+  color: #fff;
+  border: solid #5ad3ff;
+  background: #5ad3ff;
+  padding: 8px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  font-family: font_bold;
+  box-shadow: 1px 1px 5px solid #C4C4C4;
+  width: 90%;
+  /* display:block; */
+  text-align: center;
+}
+
+.booking {
+    text-decoration: none;
+    color: #fff;
+    display:block;
+    width: 100%;
+}
+
+.buy:hover{
+    color:#ffffff;
+    font-family:font_bold;
+}
+
+.magiamgia{
+    display: inline-block;
+}
+
+.navbar_thanhtoan{
+    border: 1px solid gainsboro;
+    height: 350px;
+    width: 95%;
+    background: #ffffff;
+    margin-left: 30px;
+    padding-left: 40px;
+    border-radius: 12px;
+    box-shadow: 1px 1px 1px gainsboro;
+    position: relative;
+    left: 50px;
+    top: 30px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 60% 30%;
+}
+
+.cart{
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    background: #ffbd5a;
+    padding: 8px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    font-family: font_regular;
+    box-shadow: 1px 1px 5px solid #C4C4C4;
+    margin-left: 2px;
+  }  
+
+
+
+
+

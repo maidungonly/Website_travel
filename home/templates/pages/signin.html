@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static "css/signin.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <title>Web du lịch Sunsetious</title>
+</head>
+
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <div class = "returnhome">
+            <a href = "/"> <i class="fas fa-home return"></i> Trở về trang chủ</a>
+        </div>
+        <fieldset>
+            <div id="col-left">
+                <div class="logo-content">
+                    <a href="/"><img src="{%static "images/Login-Signin/Logo.png" %}"></a>
+                    <p class="logo-discript">   </p>
+                </div>
+                <div>
+                    <img src="{%static "images/Login-Signin/DK-DN-img.png" %}" class="picture-discipt">
+                </div>
+            </div>
+            <div id="col-right">
+                <h1>Chào mừng</h1>
+                <!--Chỗ này là tiêu đề trên cùng-->
+                <h2>Đăng nhập tài khoản của bạn</h2>
+
+                <!--Chỗ này là 2 ô đăng nhập-->
+                <div class='ab'>
+                    <!--cái này là cái hình user-->
+                    <i class="fas fa-user fa-lg" style="color: rgb(134, 134, 134);"> </i>
+                    <label type="text" placeholder="Tên tài khoản">
+                    <input name="username" type="text" placeholder="Tên tài khoản" required>
+                </div>
+                <div class='ab'>
+                  
+                    <i class="fas fa-lock fa-lg" style="color: rgb(134, 134, 134);"></i>
+                    <label  type="text" placeholder="Mật khẩu">
+                    <input  name="password" type="password" placeholder="Mật khẩu" pattern=".{6,}" required>
+                </div>
+                <div class ="quenmatkhau">
+                <a href="#">Quên mật khẩu</a>
+                </div>
+
+                <div class="control-button">
+                    <!--Chỗ này là 2 nút-->
+                    <button type="submit" class="dnbutton" >Đăng nhập</button>
+                    <a href="/register"><button type="button" class="dkbutton">Đăng ký</button></a>
+                </div>
+
+                <p>Hoặc đăng nhập bằng:</p>
+                <!--Chỗ này là vùng mấy cái logo facebook,...-->
+                <div class="order-logo">
+                    <!-- <i class="ti-arrow-circle-down"></i>
+                    <i class="ti-arrow-circle-down"></i>
+                    <i class="ti-arrow-circle-down"></i> -->
+                    <img src="{%static "images/Login-Signin/gmail.png" %}">
+                    <img src="{%static "images/Login-Signin/fb.png" %}">
+                    <img src="{%static "images/Login-Signin/instagram.png" %}">
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    {% if messages %}
+        {% for message in messages %}
+            {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+        {% endfor %}
+    {% endif %}
+<script src="{% static 'js/signin.js' %}"></script>
+</body>
+
+</html>

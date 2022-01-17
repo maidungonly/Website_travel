@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static "css/register.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <title>Web du lịch Sunsetious</title>
+</head>
+
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <div class = "returnhome">
+            <a href = "/"> <i class="fas fa-home return"></i> Trở về trang chủ</a>
+        </div>
+        <fieldset>
+            <div id="col-left">
+                <div class="logo-content">
+                    <a href="/"><img src="{%static "images/Login-Signin/Logo.png" %}"></a>
+                    <p class="logo-discript">   </p>
+                </div>
+                <div>
+                    <img src="{%static "images/Login-Signin/DK-DN-img.png" %}" class="picture-discipt">
+                </div>
+            </div>
+            <div id="col-right">
+                <h1>Tạo tài khoản</h1>
+                <!--Chỗ này là tiêu đề trên cùng-->
+                <h2>Đăng ký tài khoản mới ngay!</h2>
+
+                <!--Chỗ này là 2 ô đăng nhập-->
+                <div class = 'ab'>
+                   
+                    <!--cái này là cái hình user-->
+                    <i class="fas fa-user fa-lg" style="color: rgb(134, 134, 134);"> </i>
+                    <input name="username" type="text" placeholder="Tên tài khoản" required>
+                    <!-- {{form.username}} -->
+                </div>
+                
+                <div class = 'ab'>
+                    <i class="fas fa-lock fa-lg" style="color: rgb(134, 134, 134);"></i>
+                    <input name="password1" type="password" placeholder="Mật khẩu" pattern=".{6,}" required>
+                    <!-- {{form.password}} -->
+                </div>
+
+                <div class = 'ab'>
+                    <i class="fas fa-lock fa-lg" style="color: rgb(134, 134, 134);"></i>
+                    <input name="password2" type="password" placeholder="Nhập lai Mật khẩu" pattern=".{6,}" required>
+                    <!-- {{form.password}} -->
+                </div>
+                
+                <div class = 'ab'>
+                    <i class="fas fa-envelope fa-lg"  style="color: rgb(134, 134, 134);"></i>
+                    <input name="email" type="text" placeholder="Email">
+                    <!-- {{form.email}} -->
+                </div>
+
+                {{form.errors}}
+
+                <div class="control-button">
+                    <!--Chỗ này là 2 nút-->
+                    <a href="/signin"><button type='button' class="dnbutton" onclick="signin()">Đăng nhập</button></a>
+                    <button type="submit" class="dkbutton">Đăng ký</button>
+                </div>
+                <!-- {{form.errors}} -->
+                <p>Hoặc đăng nhập bằng:</p>
+                <!--Chỗ này là vùng mấy cái logo facebook,...-->
+                <div class="order-logo">
+                    <!-- <i class="ti-arrow-circle-down"></i>
+                    <i class="ti-arrow-circle-down"></i>
+                    <i class="ti-arrow-circle-down"></i> -->
+                    <img src="{%static "images/Login-Signin/gmail.png" %}">
+                    <img src="{%static "images/Login-Signin/fb.png" %}">
+                    <img src="{%static "images/Login-Signin/instagram.png" %}">
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    <!-- {% if messages %}
+        {% for message in messages %}
+          <script>alert("{{ message }}")</script>
+        {% endfor %}
+    {% endif %} -->
+<script>
+    var form_fields = document.getElementsByTagName('input')
+		form_fields[1].placeholder='Username..';
+		form_fields[4].placeholder='Email..';
+		form_fields[2].placeholder='Enter password...';
+		form_fields[3].placeholder='Re-enter Password...';
+		for (var field in form_fields){
+			form_fields[field].className += 'form-control'
+		}
+</script>
+</body>
+</html>

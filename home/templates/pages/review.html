@@ -1,0 +1,196 @@
+{% extends 'pages/base.html' %}
+
+{% load static %}
+
+{% block title%}Sunsetious | Cẩm nang du lịch{% endblock %}
+ {% block linkcss%}<link rel="stylesheet" href="{% static "css/review.css" %}" type="text/css">{% endblock %}
+
+{% block imgorsearch%}
+<div class="search-bar">
+            <div class="thanh-tim-kiem">
+                <input type="search" name="search" placeholder="Nhập tên thành phố, địa điểm muốn tìm bài viết">
+                <button name="search" type="button">
+                    <i class="far fa-search fa-2x"></i>
+                </button>
+            </div>
+</div>
+{% endblock %}
+
+{% block main%}
+        <section class="diadanh">
+            <h1>Địa danh nổi tiếng</h1>
+            <div class="diadanh_container">
+                <div class = "buttonleft">
+                    <button class="left" onclick="changeslide(-1)"><i class="fas fa-angle-left fa-2x"
+                        style="color: #494949"></i></button>
+                </div>
+                
+                <div class="diadanh_slide-gr">
+                    <div class="diadanh_slides">
+                    {% for area in areas %}
+                        <div class="diadanh_slide">
+                            <div class="diadanh_content">
+                                <img src='{{area.image.url}}' class="areaimg">
+                                <a class="areareview" href="/areareview">{{area.name}}</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+                    <div class = "buttonright">
+                        <button class="right" onclick="changeslide(1)"><i class="fas fa-angle-right fa-2x"
+                            style="color: #494949"></i></button>
+                    </div>
+            </div>
+            <button name="show_all" type="button">Xem tất cả</button>
+        </section>
+        <section class="post_yeuthich">
+            <h1>Bài viết được yêu thích nhất trong tuần qua</h1>
+            <article>
+                <div class="postyt_container">
+                    <img src="{% static 'images/review/IMG_8647 2.png' %}" />
+                    <div class="text-box">
+                        <p class="postyt_title">Top 10 việc nên làm khi đến Đà Nẵng</p>
+                        <a class="link_postyt" href="/postdanang">Xem tiếp ></a>
+                        <time class="postyt_time" datetime="2021-10-05">5 Tháng 10, 2021</time>
+                        <p class="postyt_noidung">Lên kế hoạch cho một chuyến du lịch đến Đà Nẵng? Tại sao không?
+                            <br>Thành phố
+                            lớn nhất ở miền
+                            Trung Việt Nam....</br>
+                            <br>Bây giờ cùng mình điểm qua 5 điều nên làm khi đến Đà Nẵng. Sau đó ghé <a href="">phòng
+                                đặt vé
+                                Sunsetious</a> và book ngay một chuyến đến Đà Nẵng nào!</br>
+                        </p>
+                    </div>
+                    <div class="rateinpostyt">
+                        <i class="fas fa-star" style="color: #FBBB00;"></i> <b style="color: #3db3e6;">4.5</b>
+                        <i class="fal fa-grip-lines-vertical"></i>
+                        <i class="fas fa-comment" style="color: #145B90;"></i> <b>4,453 bình luận</b>
+                        <i class="fal fa-grip-lines-vertical"></i>
+                        <i class="fas fa-heart" style="color: #EC1522;"></i> <b>23N+ yêu thích</b>
+                    </div> 
+                </div>
+            </article>
+        </section>
+        <section class="sap_xep">
+            <svg width="1000" height="1">
+                <line x1="0" y1="1" x2="1000" y2="1"
+                    style="stroke: rgb(150, 150, 150); stroke-linecap:round; stroke-width:0.5;" />
+            </svg>
+            <div class="bo_loc">
+                <p>Sắp xếp theo: </p>
+                <button>Gần đây</button>
+                <button>Yêu thích</button>
+                <button>Đánh giá</button>
+                <!--<button name="sap_xep" type=>A <i class="fas fa-arrow-right fa-0.5x"></i> Z</button>-->
+                
+            </div>
+            <svg width="1000" height="1">
+                <line x1="0" y1="1" x2="1000" y2="1"
+                    style="stroke: rgb(150, 150, 150); stroke-linecap:round; stroke-width:0.5;" />
+            </svg>
+        </section>
+        <section class="list_post">
+            <div class="item">
+                <article>
+                    <div class="post">
+                        <div class="post_img">
+                            <img src="{% static 'images/review/salt-g3e097addf_640 1.png' %}" />
+                            <div class="rateinpost">
+                                <i class="fas fa-star" style="color: #FBBB00;"></i> <b style="color: #3db3e6;">4.5</b>
+                                <i class="fal fa-grip-lines-vertical"></i>
+                                <i class="fas fa-comment" style="color: #145B90;"></i> <b>4,453 bình luận</b>
+                                <i class="fal fa-grip-lines-vertical"></i>
+                                <i class="fas fa-heart" style="color: #EC1522;"></i> <b>23N+ yêu thích</b>
+                            </div>
+                        </div>
+                        <div class="post_title">
+                            <p class="title_post">Đến Nha Trang trải nghiệm học làm muối?</p>
+                            <svg width="400" height="1">
+                                <line x1="0" y1="1" x2="400" y2="1"
+                                    style="stroke: rgb(150, 150, 150); stroke-linecap:round; stroke-width:0.5;" />
+                            </svg>
+                            <p><time datetime="2021-10-10">10 Tháng 10, 2021</time></p>
+                        </div>
+                        <div class="post_noidung">
+                            <p>Bạn đã tới Nha Trang nhiều lần nhưng có khi nào bạn nghe đến cánh đồng tuyết trắng siêu
+                                hot nơi đây chưa?</p>
+                            <p>Cánh đồng muối Hòn Khói là một địa danh tham quan độc đáo gần Nha Trang mà bạn nhất định
+                                phải đến một lần trong đời. Ở đây, muối được thu hoạch thủ công từ những cánh đồng dọc
+                                theo bãi biển Dốc Lết......</p>
+                            <button name="xemtiep">Xem tiếp <i class="fas fa-angle-right"></i></button>
+                        </div>
+                    </div>
+                </article>
+                <aside>
+                    <div>
+                        <p class = "tourthamkhao">Tour tham khảo</p>
+                    </div>
+                    <div class="box_tour">
+                        <img src="{% static 'images/review/nha-trang-3039564_1280 1.png' %}" />
+                        <div class="box_tour_text">
+                            <p class="bold">Tour du lịch Nha Trang 3N2Đ</p>
+                            <p><strong style="font-family: quicksan-bold;">Giá:</strong> <i style="text-decoration: line-through;">2,675,873 VNĐ</i>
+                            <br>2,175,000 VNĐ</br></p>
+                            <button name="xem_ngay">Xem ngay</button>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <svg width="1000" height="1">
+            <line x1="0" y1="1" x2="1000" y2="1"
+                style="stroke: rgb(150, 150, 150); stroke-linecap:round; stroke-width:0.5;" />
+        </svg>
+        <section>
+            <div class="item">
+                <article class = "par">
+                    <div class="post">
+                        <div class="post_img">
+                            <img src="{% static 'images/review/9ecad24514bfa09ae77947ca4410b3f3 1.png' %}" />
+                            <div class="rateinpost">
+                                <i class="fas fa-star" style="color: #FBBB00;"></i> <b style="color: #3db3e6;">4.5</b>
+                                <i class="fal fa-grip-lines-vertical"></i>
+                                <i class="fas fa-comment" style="color: #145B90;"></i> <b>4,453 bình luận</b>
+                                <i class="fal fa-grip-lines-vertical"></i>
+                                <i class="fas fa-heart" style="color: #EC1522;"></i> <b>23N+ yêu thích</b>
+                            </div>
+                        </div>
+                        <div class="post_title">
+                            <p class="title_post">Cứ chụp là có ảnh đẹp ở Đà Lạt với hơn 20 quán cà phê đẹp nên thơ</p>
+                            <svg width="400" height="1">
+                                <line x1="0" y1="1" x2="400" y2="1"
+                                    style="stroke: rgb(150, 150, 150); stroke-linecap:round; stroke-width:0.5;" />
+                            </svg>
+                            <p><time datetime="2021-10-06">6 Tháng 10, 2021</time></p>
+                        </div>
+                        <div class="post_noidung">
+                            <p>Bạn muốn đến Đà Lạt ngoài vui chơi trải nghiệm còn muốn mang về một kho ảnh sống ảo cực
+                                xịn sò để đăng lên mạng xã hội? Bỏ túi ngay 20 quán cà phê nên thơ ở Đà Lạt ngay thôi</p>
+                            <button name="xemtiep">Xem tiếp <i class="fas fa-angle-right"></i></button>
+                        </div>
+                    </div>
+                </article>
+                <aside>
+                    <div>
+                        <p>Tour tham khảo</p>
+                    </div>
+                    <div class="box_tour">
+                        <img src="{% static 'images/review/nha-trang-3039564_1280 1.png' %}" />
+                        <div class="box_tour_text">
+                            <p class="bold">Tour du lịch Đà Lạt 3N2Đ</p>
+                            <p><strong style="font-family: quicksan-bold;">Giá:</strong> <i style="text-decoration: line-through;">1,343,873 VNĐ</i>
+                                <br>999,000 VNĐ</br></p>
+                            <button name="xem_ngay">Xem ngay</button>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <svg width="1000" height="1">
+            <line x1="0" y1="1" x2="1000" y2="1"
+                style="stroke: rgb(150, 150, 150); stroke-linecap:round; stroke-width:0.5;" />
+        </svg>
+{% endblock %}
+
+{% block linkjs %}<script src="{% static 'js/review.js' %}"></script>{% endblock %}

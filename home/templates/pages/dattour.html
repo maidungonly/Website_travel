@@ -1,0 +1,123 @@
+{% extends 'pages/base.html' %}
+
+{% load static %}
+
+{% block title%}Sunsetious | Đặt tour{% endblock %}
+
+{% block linkcss%}<link rel="stylesheet" href="{% static "css/dattour.css" %}" type="text/css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">{% endblock %}
+{% block imgorsearch%}
+<img src="{%static "images/book_tour/hcm.png"%}" alt="Nha tho Duc Ba" class="nhatho">
+{% endblock %}
+{% block main%}
+<div class="main_1">
+    <div>
+        <h3 id="nguontrang" style="font-size: 14px;">
+            <span style="color:#fbbb00">SUNSETIOUS</span><span style="color: #5ad3ff"> > </span><span> ĐẶT
+                VÉ</span><span style="color: #5ad3ff;"> > </span><span> VÉ TOUR</span>
+        </h3>
+        <h4>
+            <span style="color: #5ad3ff; font-weight: 20px; font-size: 17px;"><i class="fas fa-star" style="color: #FBBB00;"></i> {{product.stars}}</span><span
+                style="font-weight: 20px; font-size: 15px"> | {{product.n_reviews}}
+                đánh giá | {{product.n_orders}} đã đặt</span>
+        </h4>
+        <h1>
+            {{product.name}}
+        </h1>
+    </div>
+
+    <aside class="chinhsach">
+        <div class="dieukien">
+            <p class="hoantien">
+                <i class="far fa-hand-holding-usd fa-2x" alt="Hoan tien" style="width: 35px; margin-top: 20px;"></i>
+                Hoàn huỷ miễn phí trong 72h/Hoàn huỷ miễn phí trong 7 ngày/Hoàn huỷ có điều kiện*
+            </p>
+        </div>
+
+        <div class="dieukien2">
+            <div class="Xuathd">
+                <p> <i class="far fa-print fa-2x" alt="Xuat hoa don" style="width: 35px;"></i> Xuất trình vé điện tử hoặc in voucher</p>
+            </div>
+            <div class="time">
+                <p><i class="far fa-clock fa-2x" alt="Thoi gian"
+                    style="width: 35px;  position: relative; top: 3px"></i>Thời hạn: {{product.duration}} ngày</p>
+            </div>
+            <div class="Ngonngu">
+                <p><i class="fad fa-globe-africa fa-2x" alt="Ngon ngu"
+                    style="width: 35px; position: relative; top: 5px"></i>Tiếng Anh/ Tiếng Việt</p>
+            </div>
+        </div>
+    </aside>
+
+    <div class="thongtindd">
+        <ul>
+            {% for dd in product.info_dd %}
+            <li>{{dd}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="ttdd">
+        <h2>Thông tin địa điểm </h2>
+        <p>{{product.detail_info}}</p>
+    </div>
+    <div class="ttuudai">
+        <h2>Thông tin ưu đãi thêm </h2>
+        <div class="uudai">
+            <strong>2 bữa ăn miễn phí</strong>
+            <ul class="uudaibuaan">
+                <li>Bữa sáng: Bánh mì + Cà phê/ sữa</li>
+                <li>Bữa trưa: Cơm phần</li>
+            </ul>
+            <strong>Một món quà lưu niệm</strong> <br>
+            <strong>Chụp 5 tấm hình free</strong>
+        </div>
+    </div>
+    <div class="diadiem">
+        <h2>Địa điểm</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4111915569893!2d106.69683021476398!3d10.779785492319288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f37e6d82451%3A0xe84f59936ced5b45!2zTmjDoCB0aOG7nSDEkOG7qWMgQsOgIFPDoGkgR8Oybg!5e0!3m2!1svi!2s!4v1635699149742!5m2!1svi!2s"
+            width="700" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+            class="mapducba"></iframe>
+    </div>
+</div>
+
+
+<div class="navbar_thanhtoan">
+    <div class="thanhtoandh">
+        <p>Chính sách đảm bảo giá của Sunsetious</p>
+        <span style="font-size: 1.2rem;">Giá chỉ: <strong style="font-size: 2rem;"> {{product.price}} VNĐ</strong></span>
+        <div class="thongtindathang">
+            <div class="flex-center">
+            <div>
+            <i class="far fa-alarm-clock fa-2x" alt="Thoi gian dat hang"
+                style="color:#009AA2"></i>
+            </div>
+            <div style="display:flex; flex-direction:column; gap: 5px; margin-bottom:5px;">
+                <label for="timego"><i>Chọn thời gian đặt hàng:</i></label>
+                <input class="choosedate" type="date" name ="timego ">
+            </div>
+        </div>
+
+            <div class="flex-center">
+            <i class="fal fa-tachometer-fast fa-lg" alt="Xac nhan tuc thoi"
+                    style="color:#FF5722"></i>
+            <a href="">
+                Xác nhận tức thời
+            </a></div>
+        </div>
+    </div>
+    <div class="giamgia">
+        <form>
+            <input class="inputsale" type="text" placeholder="Nhập mã giảm giá">
+            <button class="apdung" onclick="apdungsale()">Áp dụng</button>
+        </form>
+    </div>
+    <!-- <div class="btn" style="margin:5px;"> -->
+    <button class="buy"><a class="booking" href='/order/{{product.slug}}'>Đặt ngay</a></button>
+    
+    <!-- </div> -->
+    <!-- <div class "btn">
+    <button class="cart" onclick="themgiohang()">Thêm vào giỏ hàng</button>
+    </div> -->
+</div>{% endblock %}
+{% block linkjs %}{% endblock %}

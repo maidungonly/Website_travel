@@ -1,0 +1,338 @@
+main {
+    margin-top: 70px;
+    background-color: #e8f9ff;
+}
+
+.link {
+    padding-top: 20px;
+}
+
+.container {
+    display: flex; 
+    /* flex-wrap: wrap; */
+}
+
+.info {
+    flex-grow: 2;
+    padding: 2rem 2rem 1rem 2rem;
+}
+
+.customer, .tour, .voucher, .payment, .confirm, .services, .bill {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 30px;
+    margin-bottom: 1rem;
+    min-width: 400px;
+    margin-left: 2rem;
+}
+
+.tour {
+    display: flex;
+    /* flex-wrap: wrap; */
+    
+}
+
+.descriptions span {
+    border-right: .5px solid lightgray;
+    padding: 0 0.5rem;
+      
+}
+
+.table {
+    margin-top: 2rem; 
+    width: 300px;
+    text-align: center;
+}
+
+.table th {
+    font-weight: normal;
+    font-size: 0.875rem;
+}
+
+.table th, td {
+    border-right: 1.5px solid lightgray;
+}
+
+.image {
+    width: 250px;
+    height: 150px;  
+    background-image: url(../images/order/89Ed9078d6332d6d7422.jpg);
+    background-size: cover;
+    border-radius: 30px;
+    margin-right: 1.5rem;
+}
+
+.log-in {
+    background-color: #B3E3F4;
+    border-radius: 30px;
+    padding: 0.75rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.red{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+#name, #mail {
+    border: 0;
+    border-bottom: 1px solid lightgray;
+}
+
+#phone {
+    border-radius: 10px;
+    background-color: lightgray;
+}
+
+.red {
+    color: red;
+}
+
+.voucher {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    
+}
+
+.add {
+    background-color: #137ACA; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+
+    
+}
+
+.method {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5rem 0 2rem;
+    border-bottom: 1.5px solid lightgray;
+}
+
+
+
+input[type=radio] {
+    border: 0px;
+    width: 4rem;
+    height: 1.5rem;
+}
+
+.confirm {
+    position: relative;
+}
+
+.thanhtoan {
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: #2DA6D9;
+    color: white;
+    border: 0;
+    font-size: 1.3rem;
+    position: relative;
+    left: 75%;
+    cursor: pointer;
+    width: 150px;
+}
+
+
+
+
+
+.price-bill {
+    flex-grow: 1;
+    padding: 2rem 2rem 1rem 2rem;
+}
+
+.services p, .services span {
+    font-size: 1.1rem;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.center {
+    color: blue;
+    font-weight: 600;
+    justify-content:center;
+}
+
+.prices {
+    justify-content: space-between;
+    padding: 0.5rem 0 0 0;
+    border-bottom: 1.5px solid lightgray;
+
+}
+
+.noborder{ 
+    border: 0;
+}
+
+.end {
+    justify-content: end;
+}
+
+.gray {
+    font-size: 1.1rem;
+    color: gray;
+    font-weight: 530;
+}
+
+.price {
+    color: black;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    border-radius: 30px;
+    position:relative;
+    min-width: 400px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .voucher-info {
+      display:flex;
+      border-width: 1px;
+      justify-content: space-between;
+  }
+
+  .voucher-info button {
+      border-style: none;
+      background-color: white; 
+  }
+
+  .voucher-info ul {
+    list-style-type: none;
+  }
+
+  #voucher-input {
+      border: 0;
+      border-bottom: 1px solid gray;
+      width: 100%;
+  }
+
+  #voucher-submit {
+      padding : 0.5rem;
+      background-color: blue;
+      color: white;
+      border: 0;
+      font-size: 1rem;
+      border-radius: 30px;
+      position: absolute;
+      left: 80%;
+      top: 16%;
+  }
+
+  .voucher-info ul {
+    border-right: 1px dashed gray;
+    width: 70%;
+    padding: 0.5rem;
+  }
+
+  .voucher-info button {
+      text-align: center;
+      width: 30%;
+  }
+
+  .voucher-info button b {
+      color: blue;
+  }
+
+  .voucher-list {
+      box-shadow: 0 5px 2px lightgray, -5px 0 blue;
+  }
+
+
+.use {
+    cursor: pointer;
+    
+}
+
+.link a{
+    text-decoration: none;
+    color:#000000;
+    font-family: quicksan-bold;
+}
+
+.link{
+    padding-left: 30px;
+}
+
+.giamgiabox{
+    display: flex;
+    align-items: center;
+}
+.magiamgia{
+    font-family: quicksan-bold;
+}
+
+#icon{
+    color: #2F3747;
+    margin-right: 10px;
+}
+
+.cf{
+    display: flex;
+    align-items: center;
+}
+
+input[name="agree"]{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#phone{
+    background-color: #F2F2F2;
+    border:none;
+    font-family: quicksan-light;
+}

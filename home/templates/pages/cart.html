@@ -1,0 +1,119 @@
+{% extends 'pages/base.html' %}
+
+{% load static %}
+
+{% block title%}Sunsetious | Giỏ hàng{% endblock %}
+
+{% block linkcss%}
+<link rel="stylesheet" href="{% static "css/cart.css" %}" type="text/css">
+{% endblock %}
+{% block imgorsearch%}{% endblock %}
+{% block main%}        
+<input><i class="fas fa-ad"></i>
+<div class="localtrang">
+    <a href="#">Trang chủ</a>
+    <i class="far fa-angle-right"></i>
+    <b class="giohang">Giỏ hàng ( <b class="countdonhang">1</b> )</b>
+</div>
+<div class="giohangbox">
+    <table>
+        <thead>
+            <tr>
+                <th id=""></th>
+                <th id="dichvu">Dịch vụ</th>
+                <th id="tensanpham">Tên sản phẩm</th>
+                <th id="ngaybatdau">Ngày bắt đầu</th>
+                <th id="dongia">Đơn giá(VNĐ)</th>
+                <th id="soluong">Số lượng</th>
+                <th id="thanhtien">Thành tiền</td=h>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <form>
+                        <input id="checkbox" type="checkbox" name="1">
+                    </form>
+                </td>
+                <td headers="dichvu">Tour du lịch</td>
+                <td headers="tensanpham">Tour tham quan TP. Hồ Chí Minh - Nhà Thờ Đức Bà</td>
+                <td headers="ngaybatdau">13/12/2021</td>
+                <td headers="dongia" id='1'></td>
+                <td headers="soluong"><input onchange="reCalculate()" min="0" type="number" name="numbers" id="num" placeholder="1" value="1">
+                <td id="num-price" headers="thanhtien">743,460</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function reCalculate() {
+            let priceStr = document.getElementById('1').innerText;
+            priceStr = priceStr.toString().replace(',', '');
+            priceStr = priceStr.replace(' VND', '');
+            let price = Number(priceStr);
+
+            let numbers = Number(document.getElementById('num').value);
+            let numPrice = price * numbers;
+            let vat = Math.floor(0.1 * numPrice);
+            let total = numPrice + vat;
+
+            document.getElementById('1').innerHTML = price.toLocaleString() + ' VND';
+            document.getElementById('num-price').innerHTML = numPrice.toLocaleString() + ' VND';
+        }
+    </script>
+    <script>
+        let price = 743460;
+        document.getElementById('1').innerHTML = price.toLocaleString() + ' VND';
+    </script>
+</div>
+
+<div class="dealandpaybox">
+    <div class="linebox">
+        <div class="magiamgia">
+            <i class="fas fa-ticket-alt fa-lg" style="color: #74C688; margin-right:5px"></i>
+            <p>Mã giảm giá</p>
+        </div>
+        <button class="adddeal">+</button>
+    </div>
+    <div class="chontatca">
+        <div class="somebutton">
+            <button class="checkall" value="select" onClick="toggle()">Chọn tất cả</button>
+            <button class="delete">Xoá</button>
+        </div>
+
+        <div class="sumpaytitle">
+            Tổng thanh toán (0 sản phẩm):
+        </div>
+        <div class="thanhtienvnd">
+            <p class = "money"></p> VNĐ
+        </div>
+        <button class="muahang" onClick="order()">Mua hàng</button>
+    </div>
+    <script>
+
+        function toggle()
+        {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            var btn = document.querySelectorAll('checkall');
+            /*if(btn.value == "select")*/
+            {
+                for (var i = 0; i < checkboxes.length; i++)
+                    {checkbox.checked = true;}
+                /*btn.value = 'deselect';*/
+            }
+            /*else
+            {
+                for (var i = 0; i < checkboxes.length; i++)
+                    {checkbox.checked = false;}
+                button.value = 'select' 
+            }*/
+        }
+    </script>
+    <script>
+        function order(){
+            window.location.href = '/order/{{product.slug}}';
+        }
+    </script>
+</div>
+{% endblock %}
+{% block linkjs %}
+{% endblock %}

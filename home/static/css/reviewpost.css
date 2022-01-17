@@ -1,0 +1,244 @@
+html{
+    font-family: quicksan;
+    font-size: 15px;
+    background-color: #F0FBFF;
+}
+body{
+    margin: 0 auto;
+    padding-top: 70px;
+    background-color: #F0FBFF;
+}
+main{
+    padding-left: 20px;
+}
+h1{
+    color: rgb(22, 47, 92);
+    font-size: 22px; 
+    margin-bottom: 10px;
+}
+h2{
+    color: rgb(22, 47, 92);
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 30px
+}
+ul{
+    text-decoration: none;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    padding-inline-start: 0px;
+}
+li{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+.header__menu--items2{
+    color: #137ACA;
+}
+
+/*=========================MAIN=============================*/
+/*Post*/
+.location{
+    font-size: 15px;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.location a{
+    text-decoration: none;
+    color: #145B90;
+    font-family: quicksan-bold;
+    margin-right: 10px;
+}
+.location b{
+    margin-left: 10px;
+}
+time{
+    color:#787878;
+}
+.post-background{
+    width: 90%;
+    height: fit-content;
+    margin: 0 auto;
+    margin-top: 10px;
+    
+}
+.post-background img{
+    width: 95%;
+}
+h1,time,.intro-text,.list-post-items{
+    padding-left: 3%;
+    padding-right: 3%;
+}
+.intro-text{
+    width: 95%;
+}
+.list-post-items{
+    width: 95%;
+}
+.item{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    height: 400px;
+    grid-gap:5px;
+}
+.item .title{
+    color:#145B90;
+    font-family: quicksan-bold;
+    font-size: 16px;
+}
+.item p{
+    width: 94%;
+}
+.item img{
+    height: 380px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgb(70, 70, 70);
+}
+/*===================*/
+.vote-for-post{
+    display: flex;
+    width: 95%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+}
+.reaction{
+    flex: 1;
+    font-size: 18px;
+    font-weight: lighter;
+    text-align: center;
+    color: #686868;
+}
+.danhgia{
+    flex: 2;
+    font-size: 18px;
+    text-align: center;
+    color: #686868;
+}
+.rateinpost{
+    flex:2;
+    font-size: 17px;
+    text-align: right;
+    color: #145B90;
+}
+button[name = "reaction"]{
+    border-radius: 20px;
+    border: 1px solid #686868;
+    background-color: #F0FBFF;
+    cursor: pointer;
+    font-size: 23px;
+    color: #686868;
+}
+#saodanhgia{
+    cursor: pointer;
+}
+/*===========================*/
+.comment{
+    align-items: center;
+    text-align: center;
+}
+.nhapcmt{
+    font-size: 40px;
+    align-items: center;
+    display:flex;
+}
+input[name ="yourcmt"]{
+    width: 85%;
+    height: 55px;
+    font-size: 18px;
+    color: black;
+    background-color: #F2F2F2;
+    border: 1px solid #C4C4C4;
+    border-radius: 20px;
+    padding-left: 10px;
+    margin-right: 20px;
+}
+.youracc{
+    margin-top: 30px;
+    text-align: left;
+    display: flex;
+    align-items: top;
+
+}
+.username{
+    font-family: quicksan-bold;
+    font-size: 20px;
+    color: #145B90;
+}
+.avatar{
+    margin-right: 10px;
+    flex: 1;
+}
+.tenandinput{
+    display: flex;
+    flex-direction: column;
+    flex: 10;
+    text-align: left;
+    gap: 10px;
+}
+i[name = "sendcmt"]{
+    cursor: pointer;
+}
+/*==========================listcmt=====================*/
+.listcmt{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top:20px ;
+}
+.boxcmt{
+    display: flex;
+    gap: 25px;
+    justify-content:left;
+}
+.tenvanoidungcmt{
+    text-align: left;
+}
+.tenvanoidungcmt b{
+    font-size: 18px;
+}
+/*=================*/
+/*rcmtour*/
+.rcmtour{
+    display: flex;
+    justify-content:flex-start;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    gap:10px;
+}
+.box_tour{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    border: 0px solid #9e9b9b;
+    width:fit-content;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px #C4C4C4;
+}
+.box_tour_text{
+    text-align: center;
+    color:#145B90;
+}
+.box_tour_text .bold{
+    font-family: quicksan-bold;
+    font-weight: bold;
+}
+button[name="xem_ngay"]
+{
+    background-color: #FB9700;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    width: 157px;
+    height: 35px;
+    font-size: 16px;
+    cursor: pointer;
+}

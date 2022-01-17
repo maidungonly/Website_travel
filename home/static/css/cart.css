@@ -1,0 +1,210 @@
+.localtrang {
+    font-size: 15px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.localtrang a {
+    color: black;
+    margin-right: 15px;
+}
+
+.giohang {
+    margin-left: 15px;
+    color: #137ACA;
+}
+
+th {
+    font-family: quicksan-light;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+.giohangbox,
+.dealandpaybox {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 0px 1px 2px 0px #aaaaaa;
+    margin-top: 20px;
+    min-height: 150px;
+}
+
+.dealandpaybox {
+    margin-bottom: 100px;
+}
+
+.dealandpay {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 1fr;
+    align-items: center;
+    height: 110px;
+}
+
+.magiamgia {
+    margin-left: 35em;
+    display: flex;
+    align-items: center;
+    color: #145B90;
+    font-family: quicksan-bold;
+}
+
+.adddeal {
+    float: right;
+    margin-right: 50px;
+    margin-top: -40px;
+    background-color: #137ACA;
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.linebox {
+    border-bottom: 1px dashed #979797;
+    margin-left: 45px;
+    width: 91%;
+    padding-bottom: 5px;
+}
+
+.checkall,
+.delete {
+    text-decoration: none;
+    font-size: 15px;
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 20px;
+}
+
+.chontatca div {
+    float: left
+}
+
+.somebutton {
+    padding-left: 40px;
+    padding: 10.5px;
+    margin-bottom: 8px;
+    margin-top: 10px;
+}
+
+.muahang {
+    background-color: #CFCFCF;
+    font-size: 17px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.checkall {
+    color: #000000;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.delete {
+    height: 30px;
+    color: #9B9A9A;
+}
+
+.sumpaytitle {
+    color: #145B90;
+    font-family: quicksan-bold;
+    padding-left: 10%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.thanhtienvnd {
+    color: #2DA6D9;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.giohangbox table {
+    margin: 0 auto;
+}
+
+table,
+th,
+td {
+    border-bottom: 1px dashed #9B9A9A;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+}
+
+td {
+    font-size: 18px;
+    text-align: center;
+}
+
+td[headers="tensanpham"],
+td[headers="thanhtien"] {
+    color: #145B90;
+    font-weight: bolder;
+}
+
+th {
+    color: #7C7C7C;
+    height: 40px;
+}
+
+.chontatca{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+
+/*===================*/
+
+
+/*=======================*/
+
+td[headers="soluong"] {
+    display: flex;
+    align-items: center;
+    border-bottom: none;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.giam,
+.tang {
+    background-color: #FFFFFF;
+    color: #145B90;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.giam {
+    border-radius: 10px 0px 0px 10px;
+    border: 1px dotted #9B9A9A;
+}
+
+.tang {
+    border-radius: 0px 10px 10px 0px;
+    border: 1px solid #9B9A9A;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+td[headers="soluong"] b {
+    color: #706B6B;
+    background-color: #F2F2F2;
+    width: 30px;
+}
+input[name="numbers"]{
+    width: 70px;
+    text-align: center;
+}
