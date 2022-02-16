@@ -1,6 +1,3 @@
-*{
-    box-sizing: border-box;
-}
 @font-face {
     font-family: quicksand-light;
     src: url(../font/Quicksand-Light.ttf);
@@ -16,6 +13,9 @@
 @font-face {
     font-family: quicksand-medium;
     src: url(../font/Quicksand-Medium.ttf);
+}
+*{
+    box-sizing: border-box;
 }
 html{
     font-family: quicksand;
@@ -48,33 +48,35 @@ li{
     margin: 0;
     padding: 0;
 }
+
 /*======================================HEADER==================================*/
 /*header text*/
 .header__text {
 	text-align: center;
-	background-color: #353535;
+	background-color: #444343;
 	color: white;
     height: 20px;
+    font-family: quicksand;
 }
 .header_text a{
     font-size: 25px;
-    font-family: quicksand-bold;
+    font-family: quicksand;
 }
 .header__text a:hover{
 	text-align: center;
-	background-color: #353535;
+	background-color: #444343;
 	color: white;
-    /* font-family: quicksand-bold; */
+    font-family: quicksand-bold;
 }
 
 .header__text a:visited{
 	text-align: center;
-	background-color: #353535;
+	background-color: #444343;
 	color: white;
 }
 .header__text a:link{
 	text-align: center;
-	background-color: #353535;
+	background-color: #444343;
 	color: white;
 }
 
@@ -88,8 +90,12 @@ li{
 	height: 47px;
     justify-content:space-around;
     text-align: center;
-    color: #1067aa;
+    color: #329cc9;
     align-items: center;
+}
+
+.header__menu--list a{
+    font-family: quicksand;
 }
 
 .header_fixed{
@@ -109,7 +115,9 @@ li{
 	text-decoration: none;
 	color:#858585;
     font-weight: bold;
+    font-family: quicksand;
 }
+
 .header__menu--list{
 	list-style-type: none;
 }
@@ -132,6 +140,7 @@ li{
     justify-content:space-around;
     align-items: baseline;
 }
+
 .header__rightmenu--list:nth-of-type(1){
     text-align: right;
 }
@@ -149,24 +158,25 @@ li{
 }
 .header__DK,.logout{
     font-family: quicksand;
-	border: 1.5px solid black;
-    background-color: #FFFFFF;
+	border: 2.5px solid #353535;
 	border-radius: 15px;
 	width: 90px;
-	height: 30px;
+	height: 35px;
     align-items: center;
     font-size: 15px;
     cursor: pointer;
+    background-color:#FDDF87;
+    font-weight: bold;
 }
 
 .header__DN{
-    font-family: quicksand;
+    font-family: quicksand-bold;
     text-decoration: none;
-    border: 1px solid #2DA6D9;
+    border: 2px solid #40B4E5;
 	border-radius: 15px;
 	width: 100px;
-	height: 30px;
-	background-color:#2DA6D9;
+	height: 35px;
+	background-color: #40B4E5;
     color: #FFFFFF;
     font-size: 15px;
     cursor: pointer;
@@ -175,13 +185,12 @@ li{
 .dropdown {
     position: relative;
     display: inline-block;
-
   }
   
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color:#c0e2f1;
+    background-color:#ddecf3;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -193,10 +202,11 @@ li{
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    text-align: left;
   }
   
 .dropdown-content a:hover {
-    background-color: #137ACA;
+    background-color:#40B4E5;
     color: white;
   }
   
@@ -219,17 +229,26 @@ li{
     background-color: white;
     padding-top: 0;
 }
-.dropdown:hover .dropbtn {
+.dropdown:hover, .dropbtn:hover, .dropbtn:active {
     text-decoration: none;
-    font-family: quicksand;
-	color: 	#145B90;
+    font-family: quicksand-bold;
+	color: 	#40B4E5;
     font-weight: bold;
 }
-
-
-
-
-
+.header__menu--items1:hover, .dropbtn:hover, .header__menu--items2:hover, .header__menu--items3:hover{
+    font-family: quicksand-bold;
+    color:#40B4E5;
+    font-weight: 30px;
+}
+.header__menu--items1:active, .dropbtn:active, .header__menu--items2:active, .header__menu--items3:active{
+    font-family: quicksand-bold;
+    color:#40B4E5;
+    font-weight: 30px;
+}
+.header_text a{
+    font-size: 25px;
+    font-family: quicksand;
+}
 
 /*=========================================Footer===============================================*/
 /*rate*/
@@ -286,7 +305,7 @@ li{
     margin-right: 0.3rem;
 }
 .nhapdeal .title{
-    font-family: quicksand-bold;
+    /* font-family: quicksand-bold; */
     font-size: 17px;
     color: rgb(22, 47, 92);
 }
@@ -319,7 +338,7 @@ textarea[name="Emailhoacsodienthoai"]{
     height: 30.5px;
     width: 95px;
     font-size: 18px;
-    font-family: quicksand-bold;
+    /* font-family: quicksand-bold; */
     color: white;
     background-color: #329cc9;
     border-color: #40B4E5;
@@ -399,7 +418,7 @@ textarea[name="Emailhoacsodienthoai"]{
  /*===================================================Chatbox======================================*/
 
  .nut-mo-chatbox{
-   background-color: #1177c5;
+   background-color: #57c1ff;
    color: white;
    padding: 13px 15px;
    border: none;
@@ -497,4 +516,10 @@ textarea[name="Emailhoacsodienthoai"]{
     margin-block-start: 0em;
     margin-block-end: 0em;
     text-align: left;
+}
+
+.text_content .center{
+     font-family: quicksand-bold;
+     font-weight: 20px;
+     color:#40B4E5;
 }

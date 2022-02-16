@@ -1,3 +1,19 @@
+@font-face {
+    font-family: quicksan-light;
+    src: url(../font/Quicksand-Light.ttf);
+}
+@font-face {
+    font-family: quicksan;
+    src: url(../font/Quicksand-Regular.ttf);
+}
+@font-face {
+    font-family: quicksan-bold;
+    src: url(../font/Quicksand-SemiBold.ttf);
+}
+@font-face {
+    font-family: quicksan-medium;
+    src: url(../font/Quicksand-Medium.ttf);
+}
 html{
     font-family: quicksan;
     font-size: 15px;

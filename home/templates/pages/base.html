@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title%}{% endblock %}</title>
-    <link rel="stylesheet" href="{% static "css/base.css" %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     {% block linkcss%}{% endblock %}
 </head>
@@ -20,13 +20,14 @@
                 <a href="https://sokhdt.camau.gov.vn/wps/portal/?1dmy&page=chitiet&urile=wcm%3Apath%3A/sokhdtlibrary/sokhdtsite/noidungtrang/thongtincanbiet/cacbienphapchongdichtrongtinhhinhmoi"
                     class="">Nhận thông tin mới nhất về biện pháp ứng phó COVID-19 của chúng tôi</a>
             </div>
+            <!-- Header -->
             <nav>
                 <div class="header__container ">
                     <ul class="header__menu">
                         <li class="header__menu--list"><a href="/" class="header__menu--items1">Trang chủ</a>
                         <li class="header__menu--list">
                             <div class="dropdown">
-                                <button class="dropbtn">Đặt vé</button>
+                                <button class="dropbtn"><a>Đặt vé</a></button>
                                 <div class="dropdown-content">
                                     <a href="/tourticket">Vé tour</a>
                                     <a href="/moveticket">Vé di chuyển</a>
@@ -46,9 +47,9 @@
 
                     <!-- phần button -->
                     <ul class="header__rightmenu">
-                        <li class="header__rightmenu--list"><i class="far fa-phone-alt fa-1x"></i>1900 2901</li>
+                        <li class="header__rightmenu--list" style="font-family:quicksand-bold"><i class="far fa-phone-alt fa-1x" style="padding-left: 6px;"></i>1900 2901</li>
                         <li class="header__rightmenu--list">
-                            <img style="height: 18px; width: 18px;" src="{% static 'images/header/Co_VietNam.png' %}"/>
+                            <img style="height: 18px; width: 18px; position: relative; top: 3px;" src="{% static 'images/header/Co_VietNam.png' %}"/>
                         </li>
                         {% if request.user.customer %}
                         <li class="header__rightmenu--list"><a href="/cart"><i class="far fa-shopping-cart fa-lg"

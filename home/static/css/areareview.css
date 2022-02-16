@@ -1,3 +1,19 @@
+@font-face {
+    font-family: quicksand-light;
+    src: url(../font/Quicksand-Light.ttf);
+}
+@font-face {
+    font-family: quicksand;
+    src: url(../font/Quicksand-Regular.ttf);
+}
+@font-face {
+    font-family: quicksand-bold;
+    src: url(../font/Quicksand-SemiBold.ttf);
+}
+@font-face {
+    font-family: quicksand-medium;
+    src: url(../font/Quicksand-Medium.ttf);
+}
 html{
 	background-color: #FFF;
 }
@@ -31,13 +47,13 @@ h3{
 
 .header_h1{
 	font-size: 70px;
-	font-family: 'Bree Serif', serif;
+	font-family: quicksand-bold, serif;
 	color: #FFF;
 }
 
 .header_h2{
 	font-size: 50px;
-	font-family: 'Bree Serif', serif;
+	font-family: quicksand-bold, serif;
 	color: #FFF;
 	
 }
